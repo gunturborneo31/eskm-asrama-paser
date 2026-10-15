@@ -16,6 +16,8 @@ class NilaiUnsur extends Model
             'jenisPelayanan',
             'nama' ,
             'alamat' ,
+            'keperluan' ,
+            'foto_ktp' ,
             'pekerjaan' ,
             'jenkel' ,
             'usia' ,

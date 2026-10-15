@@ -143,7 +143,7 @@ class WordController extends Controller
 
         // Extract day, month, and year
         $hariIni = $date->format('d');
-        $bulanIni = $date->format('m');
+        $bulanIni = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'][(int) $date->format('n') - 1];
         $tahunIni = $date->format('Y');
 
         // dd($hari, $bulan, $tahun);
@@ -304,7 +304,7 @@ class WordController extends Controller
         }
 
         for ($i = 0; $i <= 11; $i++) {
-            if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2025') {
+            if ($_GET['Tahun'] == '2023') {
                 array_push($nilaiSkm, 0);
             } else {
                 array_push($nilaiSkm, $nrrTT[$i + 1] * 25);
@@ -454,7 +454,7 @@ class WordController extends Controller
             // }
             // dd($responden);
 
-            if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2025' or $_GET['Tahun'] == '2025') {
+            if ($_GET['Tahun'] == '2023') {
                 $tu = [[]];
                 $x = [];
                 $nn = [];
@@ -752,6 +752,7 @@ class WordController extends Controller
         }
         // dd($tahun);
         // Replace mark by xml code of table
+        
         $templateProcessor->setValue('bulanAwal', $bulanAwal);
         $templateProcessor->setValue('bulanAkhir', $bulanAkhir);
         $templateProcessor->setValue('semester', $semester);
@@ -776,7 +777,7 @@ class WordController extends Controller
         $templateProcessor->setValue('pekerjaan_5', $pekerjaan_5);
         $templateProcessor->setValue('pekerjaan_6', $pekerjaan_6);
         $templateProcessor->setValue('nilaiSkm', sprintf('%0.2f', $nilaiSKM));
-        $templateProcessor->setValue('$nrrT', $nrrT);
+        $templateProcessor->setValue('nrrT', $nrrT);
         $templateProcessor->setValue('mutu', $mutu);
         $templateProcessor->setValue('kinerja', $kinerja);
         $templateProcessor->setValue('hariIni', $hariIni);
@@ -1059,7 +1060,7 @@ class WordController extends Controller
         $templateProcessor->setValue(search: 'nrrt9', replace: $nrrt9);
 
         $table->addRow();
-        $table->addCell(200)->addText( 'Nilai SKM DISEPRINDAG KUTIM per'. $bulanAkhir. ' '. $tahun);
+        $table->addCell(200)->addText( 'Nilai SKM Unit Penghubung Kabupaten Paser Juanda Samarinda per '. $bulanAkhir. ' '. $tahun);
         $table->addCell(500)->addText( '');
         $table->addCell(500)->addText( '');
         $table->addCell(500)->addText( '');
@@ -1089,8 +1090,8 @@ class WordController extends Controller
 
         $templateProcessor->setComplexBlock('{tabelSaran}', $table);
         //save template with table
-        $templateProcessor->saveAs('Laporan SKM DISPERINDAG KUTIM Semester '.$semester.' Tahun '.$tahun.'.docx');
-        return response()->download('Laporan SKM DISPERINDAG KUTIM Semester '.$semester.' Tahun '.$tahun.'.docx')->deleteFileAfterSend(true);
+        $templateProcessor->saveAs('Laporan SKM Unit Penghubung Kabupaten Paser Juanda Samarinda Semester '.$semester.' Tahun '.$tahun.'.docx');
+        return response()->download('Laporan SKM Unit Penghubung Kabupaten Paser Juanda Samarinda Semester '.$semester.' Tahun '.$tahun.'.docx')->deleteFileAfterSend(true);
     }
 
     // $document_with_table = new \PhpOffice\PhpWord\PhpWord();

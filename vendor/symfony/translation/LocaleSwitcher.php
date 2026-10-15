@@ -34,9 +34,14 @@ class LocaleSwitcher implements LocaleAwareInterface
 
     public function setLocale(string $locale): void
     {
-        if (class_exists(\Locale::class)) {
-            \Locale::setDefault($locale);
+        // Silently ignore if the intl extension is not loaded
+        try {
+            if (class_exists(\Locale::class, false)) {
+                \Locale::setDefault($locale);
+            }
+        } catch (\Exception) {
         }
+
         $this->locale = $locale;
         $this->requestContext?->setParameter('_locale', $locale);
 
@@ -54,6 +59,8 @@ class LocaleSwitcher implements LocaleAwareInterface
      * Switch to a new locale, execute a callback, then switch back to the original.
      *
      * @template T
+     *
+     * @param-immediately-invoked-callable $callback
      *
      * @param callable(string $locale):T $callback
      *

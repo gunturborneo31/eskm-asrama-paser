@@ -44,7 +44,7 @@ if ($_GET['tw'] == null) {
     $endDate = $_GET['Tahun'] . '-12-31';
 }
 
-        $selects = DB::table('nilaiUnsur')
+        $selects = DB::table('2024')
             ->whereBetween('created_at', [$startDate, $endDate])
             ->paginate(20);
 

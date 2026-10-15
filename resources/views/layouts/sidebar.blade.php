@@ -1,7 +1,7 @@
 @php
     $i = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $das = 'pengaturan';
-    $navFocus = 'py-2 my-2   bg-white rounded-lg font-bold text-base pl-3  w-full flex text-[#02A859]';
+    $navFocus = 'py-2 my-2   bg-white rounded-lg font-bold text-base pl-3  w-full flex text-[#008DD5]';
     $nav =
         'py-2 my-2 ml-1  rounded-lg font-mono text-base  drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] w-full flex text-[#ffffff]';
 
@@ -16,14 +16,10 @@
     }
 @endphp
 
-<div class="py-5 px-8 w-screen relative h-screen justify-end text-sm bg-[#2b885b] bg-no-repeat"
-    style="background-color: #51a592;
-    background-image:
-        radial-gradient(at -30% -30%, #02A859, transparent 80%),
-        radial-gradient(at 130% 150%, #02A859, transparent 80%);">
+<div class="py-5 px-8 w-screen relative h-screen justify-end text-sm">
 
     <div class="flex flex-col gap-2 items-start h-1/6 -mt-2">
-        <img src="/assets/logo_kutai_timur.png" class="h-[50px] p-1 rounded-xl bg-white" alt="">
+        <img src="/assets/logo_paser.png" class="h-[44px] w-auto object-contain p-1 rounded-xl bg-white" alt="Logo Paser">
         <div class="text-white">
             <p class="text-[40px] mt-2 drop-shadow-[0_3px_3px_rgba(0,0,0,0.9)]  mb-2 ml-1 font-black">E - SKM</p>
         </div>

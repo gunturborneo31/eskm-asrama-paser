@@ -35,7 +35,7 @@ class ExportController extends Controller
     }
 
     public function exportResume(){
-        return Excel::download(new ExportResume, 'Resume Resume e-skm.xlsx');
+        return Excel::download(new ExportResume, 'Resume e-skm.xlsx');
     }
 
 }

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>E-SKM - Unit Penghubung Kabupaten Paser Juanda, Samarinda</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -21,10 +22,8 @@
         <div class="container h-full ">
             <div class="grid-2 flex h-full items-center justify-stretch">
                 <!-- Left column container with background-->
-                <div class="w-1/2 block grid-1 flex h-full items-center justify-stretch  bg-[#2b885b] bg-no-repeat"
-                    style="background-image:
-        radial-gradient(at -30% -30%, #4da279, transparent 80%),
-        radial-gradient(at 130% 150%, #4da279, transparent 80%);">
+                <div class="w-1/2 block grid-1 flex h-full items-center justify-stretch relative isolate overflow-hidden">
+                    @include('partials.paser-bg', ['contained' => true])
                     <div class="w-full">
                         <div class="flex justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -55,7 +54,7 @@
                         <div class="mb-6">
                             <label class="text-2xl">Username</label>
                             <input type="text" name="username"
-                                class="peer mt-2 block min-h-[auto] w-full rounded-lg  bg-transparent px-3 py-[0.32rem] leading-[3]  border border-2 border-[#4da279]"
+                                class="peer mt-2 block min-h-[auto] w-full rounded-lg  bg-transparent px-3 py-[0.32rem] leading-[3]  border border-2 border-[#008DD5]"
                                 id="exampleFormControlInput3" placeholder="Username" />
                         </div>
 
@@ -63,7 +62,7 @@
                         <div class="mb-6">
                             <label class="text-2xl">Password</label>
                             <input type="password" name="password"
-                                class="peer mt-2 block min-h-[auto] w-full rounded-lg  bg-transparent px-3 py-[0.32rem] leading-[3]  border border-2 border-[#4da279]"
+                                class="peer mt-2 block min-h-[auto] w-full rounded-lg  bg-transparent px-3 py-[0.32rem] leading-[3]  border border-2 border-[#008DD5]"
                                 id="exampleFormControlInput3" placeholder="Username" />
                         </div>
 
@@ -74,11 +73,11 @@
                         ?>
 
                         <button type="submit"
-                            class="text-2xl inline-block w-full rounded-lg h-16  px-7 pb-2.5 pt-3 font-medium uppercase text-white font-black  bg-[#2b885b] bg-no-repeat"
-                            style="background-color: #51a592;
+                            class="text-2xl inline-block w-full rounded-lg h-16  px-7 pb-2.5 pt-3 font-medium uppercase text-white font-black  bg-[#008DD5] bg-no-repeat"
+                            style="background-color: #008DD5;
                                     background-image:
-                                        radial-gradient(at -30% -30%, #02A859, transparent 80%),
-                                        radial-gradient(at 130% 150%, #02A859, transparent 80%);">
+                                        radial-gradient(at -30% -30%, #008DD5, transparent 80%),
+                                        radial-gradient(at 130% 150%, #008DD5, transparent 80%);">
                             MASUK
                         </button>
                     </form>

@@ -1,7 +1,7 @@
 <div class="absolute top-0 left-[215px] h-screen w-10/12 p-2">
     <div class="bg-white h-full w-full rounded-xl p-3  mb-2">
         <div class="flex w-full justify-between items-center -mt-3">
-            <p class="text-[25px] font-black text-[#01683d]">RESUME / JENIS KELAMIN</p>
+            <p class="text-[25px] font-black text-[#008DD5]">RESUME / JENIS KELAMIN</p>
             <div class="flex justify-between items-center py-4 ">
                 <div>
                     <label class="text-white font-bold text-xl"> </label>
@@ -20,11 +20,11 @@
                 }
                 ?>
                 <div class="flex flex-row items-center gap-3">
-                    <label for="countries" class=" font-bold text-[#01683d] text-base ">
+                    <label for="countries" class=" font-bold text-[#008DD5] text-base ">
                         Bulan</label>
                     <select id="countries" id="language"
                         onChange="document.location.href='pekerjaan?Bulan=' + this.value"
-                        class="bg-white border border-gray-300 text-[#01683d] font-bold   text-sm rounded-full px-3 py-1">
+                        class="bg-white border border-gray-300 text-[#008DD5] font-bold   text-sm rounded-full px-3 py-1">
                         <option value="1" <?php
                         if ($_GET['Bulan'] == '1') {
                             echo 'selected';
@@ -120,7 +120,7 @@
                 <div class="p-1.5 ">
                     <div class="border rounded-lg overflow-hidden h-[460px]">
                         <table class="w-full divide-y divide-gray-200 ">
-                            <thead class="bg-gradient-to-br from-[#1d6835] to-[#007e3f]">
+                            <thead class="bg-gradient-to-br from-[#008DD5] to-[#008DD5]">
                                 <tr>
                                     <th scope="col"
                                         class="px-6 py-3 w-[50px] text-center text-xs font-medium text-white uppercase">

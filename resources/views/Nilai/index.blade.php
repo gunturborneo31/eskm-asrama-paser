@@ -129,15 +129,15 @@ if ($n == 0) {
     $nrr = $nrr1 + $nrr2 + $nrr3 + $nrr4 + $nrr5 + $nrr6 + $nrr7 + $nrr8 + $nrr9;
     $nrr = sprintf('%0.3f', $nrr);
 
-    $nrrt1 = sprintf('%0.3f', $nrr1 * 0.111);
-    $nrrt2 = sprintf('%0.3f', $nrr2 * 0.111);
-    $nrrt3 = sprintf('%0.3f', $nrr3 * 0.111);
-    $nrrt4 = sprintf('%0.3f', $nrr4 * 0.111);
-    $nrrt5 = sprintf('%0.3f', $nrr5 * 0.111);
-    $nrrt6 = sprintf('%0.3f', $nrr6 * 0.111);
-    $nrrt7 = sprintf('%0.3f', $nrr7 * 0.111);
-    $nrrt8 = sprintf('%0.3f', $nrr8 * 0.111);
-    $nrrt9 = sprintf('%0.3f', $nrr9 * 0.111);
+    $nrrt1 = sprintf('%0.3f', $nrr1 * (1/9));
+    $nrrt2 = sprintf('%0.3f', $nrr2 * (1/9));
+    $nrrt3 = sprintf('%0.3f', $nrr3 * (1/9));
+    $nrrt4 = sprintf('%0.3f', $nrr4 * (1/9));
+    $nrrt5 = sprintf('%0.3f', $nrr5 * (1/9));
+    $nrrt6 = sprintf('%0.3f', $nrr6 * (1/9));
+    $nrrt7 = sprintf('%0.3f', $nrr7 * (1/9));
+    $nrrt8 = sprintf('%0.3f', $nrr8 * (1/9));
+    $nrrt9 = sprintf('%0.3f', $nrr9 * (1/9));
 
     $nrrT = $nrrt1 + $nrrt2 + $nrrt3 + $nrrt4 + $nrrt5 + $nrrt6 + $nrrt7 + $nrrt8 + $nrrt9;
     $nrrT = sprintf('%0.3f', $nrrT);
@@ -155,7 +155,7 @@ if ($n == 0) {
     <div class="absolute top-0 left-[215px] h-screen w-10/12 p-2">
         <div class="bg-white h-full w-full rounded-xl p-3 ">
             <div class="flex w-full h-fit justify-between items-center -mt-2 ">
-                <p class="text-[25px] font-black text-[#01683d]">RESUME / NILAI SKM</p>
+                <p class="text-[25px] font-black text-[#008DD5]">RESUME / NILAI SKM</p>
                 <div class="flex justify-between items-center py-4 ">
                     <div>
                         <label class="text-white font-bold text-xl"> </label>
@@ -177,13 +177,13 @@ if ($n == 0) {
 
                         {{-- tahun --}}
                         <div class="flex flex-row items-center gap-3 mb-5 lg:mb-0">
-                            <label for="countries" class=" font-bold text-[#01683d] text-5xl lg:text-base ">
+                            <label for="countries" class=" font-bold text-[#008DD5] text-5xl lg:text-base ">
                                 Tahun</label>
 
                             <?php if($_GET['Tahun'] == ''){ ?>
                             <select id="countries" id="language"
                                 onChange="document.location.href='?jenkel=1&usia=1&pekerjaan=1&pendidikan=1&tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value   "
-                                class="bg-white border border-gray-300 text-[#01683d] font-bold text-5xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                                class="bg-white border border-gray-300 text-[#008DD5] font-bold text-5xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
                                 <option value="2023" <?php if (date('Y') == '2023') {
                                     echo 'selected';
                                 } else {
@@ -198,11 +198,17 @@ if ($n == 0) {
                                     echo 'selected';
                                 } else {
                                 } ?>>2025</option>
+
+                                <option value="2026" <?php if (date('Y') == '2026') {
+                                    echo 'selected';
+                                } else {
+                                } ?>>2026</option>
+                                
                             </select>
                             <?php  } else {?>
                             <select id="countries" id="language"
                                 onChange="document.location.href='?jenkel=1&usia=1&pekerjaan=1&pendidikan=1&tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value   "
-                                class="bg-white border border-gray-300 text-[#01683d] font-bold text-5xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                                class="bg-white border border-gray-300 text-[#008DD5] font-bold text-5xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
                                 <option value="2023" <?php
                                 if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2025') {
                                     echo 'selected';
@@ -223,6 +229,13 @@ if ($n == 0) {
                                 } else {
                                 }
                                 ?>>2025</option>
+
+                                <option value="2026" <?php
+                                if ($_GET['Tahun'] == '2026') {
+                                    echo 'selected';
+                                } else {
+                                }
+                                ?>>2026</option>
                             </select>
                             <?php
                     }?>
@@ -232,12 +245,12 @@ if ($n == 0) {
                         {{-- tw --}}
 
                         <div class="flex flex-row items-center gap-3 mb-5 lg:mb-0">
-                            <label for="countries" class=" font-bold text-[#155748] text-5xl lg:text-base">
+                            <label for="countries" class=" font-bold text-[#008DD5] text-5xl lg:text-base">
                                 Triwulan</label>
                             <?php if($_GET['tw'] == ''){ ?>
                             <select id="countries" id="language"
                                 onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }} "
-                                class="bg-white border border-gray-300 text-[#155748] font-bold text-5xl w-full text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                                class="bg-white border border-gray-300 text-[#008DD5] font-bold text-5xl w-full text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
 
                                 <option value="1" <?php if (date('m') == 1) {
                                     echo 'selected';
@@ -277,7 +290,7 @@ if ($n == 0) {
                             <?php  } else {?>
                             <select id="countries" id="language"
                                 onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }}"
-                                class="bg-white border border-gray-300 text-[#155748] font-bold text-5xl w-[300px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                                class="bg-white border border-gray-300 text-[#008DD5] font-bold text-5xl w-[300px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
 
                                 <option value="1" <?php
                                 if ($_GET['tw'] == 1) {
@@ -335,7 +348,7 @@ if ($n == 0) {
 
                         {{-- download --}}
                         <a href="/export?tw={{ $_GET['tw'] }}&Tahun={{ $_GET['Tahun'] }}"
-                            class="py-1 text-center items-center  bg-[#155748] rounded-full font-bold text-sm px-3  w-full  text-white"
+                            class="py-1 text-center items-center  bg-[#008DD5] rounded-full font-bold text-sm px-3  w-full  text-white"
                             style="font-family:'Roboto'">
                             <p>DOWNLOAD LAPORAN SKM</p>
                         </a>
@@ -345,7 +358,7 @@ if ($n == 0) {
 
             <div class="overflow-y-auto  h-[510px]">
 
-                <div class="rounded-xl w-full p-3 mb-3 bg-gradient-to-br from-[#4da279] to-[#4da279]">
+                <div class="rounded-xl w-full p-3 mb-3 bg-gradient-to-br from-[#008DD5] to-[#008DD5]">
                     <div class="flex mb-3 justify-between text-white text-base font-bold">
                         <div class="">Tabel Konversi</div>
                         <button onclick="konversi()">
@@ -359,7 +372,7 @@ if ($n == 0) {
                     <div id="konversi" style="display : none;">
                         <table class=" w-full border">
                             <thead
-                                class="border-b bg-gradient-to-br from-[#4da279] to-[#4da279] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+                                class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
                                 <tr>
 
                                     <th scope="col" class=" px-4 py-2">Nilai Persepsi</th>
@@ -456,7 +469,7 @@ if ($n == 0) {
                     </div>
 
                 </div>
-                <div class="rounded-xl w-full p-3 mb-3 bg-gradient-to-br from-[#4da279] to-[#4da279]">
+                <div class="rounded-xl w-full p-3 mb-3 bg-gradient-to-br from-[#008DD5] to-[#008DD5]">
                     <div class="flex mb-3 justify-between text-white text-base font-bold">
                         <div class="">Rumus Perhitungan</div>
                         <button onclick="rumus()">
@@ -470,7 +483,7 @@ if ($n == 0) {
                     <div id="rumus" style="display : none;">
                         <table class=" w-full border">
                             <thead
-                                class="border-b bg-gradient-to-br from-[#4da279] to-[#4da279] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+                                class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
                                 <tr>
 
                                     <th scope="col" class=" px-4 py-2">Nilai</th>
@@ -498,7 +511,7 @@ if ($n == 0) {
                                         Nilai Penimbang
                                     </td>
                                     <td class="whitespace-nowrap text-left px-4 font-normal text-xs">
-                                        : 1/9 x 0,111
+                                        : 1/9 = 0,111111
                                     </td>
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
@@ -522,14 +535,14 @@ if ($n == 0) {
                     </div>
 
                 </div>
-                <div class="rounded-xl w-full p-3  bg-gradient-to-br from-[#4da279] to-[#4da279]">
+                <div class="rounded-xl w-full p-3  bg-gradient-to-br from-[#008DD5] to-[#008DD5]">
                     <div class="flex mb-3 justify-between text-white text-base font-bold">
                         <div class="">Tabel Nilai Survey</div>
 
                     </div>
                     <table class=" w-full border">
                         <thead
-                            class="border-b bg-gradient-to-br from-[#4da279] to-[#4da279] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+                            class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
                             <tr class="">
                                 <th scope="col" class=" px-4 py-2">No</th>
                                 <th scope="col" class=" px-4 py-2">Unsur Pelayanan</th>

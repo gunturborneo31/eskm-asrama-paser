@@ -3,15 +3,14 @@
 @section('content')
     <main class="bg-[#f4f4f5] h-screen px-12">
         <div>
-            <img class="right-14 top-6 absolute h-18 w-16" src="/images/logo_prov_kaltim.png" alt=""></img>
-            <img class="right-32 top-8 absolute h-16 w-auto" src="/images/logo_bapenda_kaltim.png" alt=""></img>
+            <img class="right-8 top-6 absolute h-16 w-auto object-contain" src="/assets/logo_paser.png" alt="Logo Paser"></img>
             <div class="hidden sm:-my-px sm:flex py-4  content-center ">
-                <h1 class="text-4xl font-black font-sans leading-tight tracking-tight text-[#1e6653] py-4  rounded-full">
+                <h1 class="text-4xl font-black font-sans leading-tight tracking-tight text-[#008DD5] py-4  rounded-full">
                     DATA DASAR</h1>
             </div>
 
             <div class="grid grid-cols-4 gap-4">
-                <a href="/dosen" class=" soverflow-hiden rounded-2xl bg-[#1e6653] shadow py-6">
+                <a href="/dosen" class=" soverflow-hiden rounded-2xl bg-[#008DD5] shadow py-6">
                     <dt class="text-xl text-center w-full  font-black text-white">
                         JENIS KELAMIN
                     </dt>
@@ -21,7 +20,7 @@
                         </dt>
                     </div>
                 </a>
-                <a href="/prodi" class=" soverflow-hiden rounded-2xl bg-[#1e6653] shadow py-6">
+                <a href="/prodi" class=" soverflow-hiden rounded-2xl bg-[#008DD5] shadow py-6">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2"
                         stroke="currentColor" class="w-16 h-16 mb-2 m-auto  justify-center text-white">
                         <path
@@ -35,7 +34,7 @@
                         PRODI
                     </dt>
                 </a>
-                <a href="/matakuliah" class=" soverflow-hiden rounded-2xl bg-[#1e6653] shadow py-6">
+                <a href="/matakuliah" class=" soverflow-hiden rounded-2xl bg-[#008DD5] shadow py-6">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2"
                         stroke="currentColor" class="w-16 h-16 mb-2 m-auto  justify-center text-white">
                         <path fill-rule="evenodd"
@@ -49,7 +48,7 @@
                         MATAKULIAH
                     </dt>
                 </a>
-                <a href="/kelas" class=" soverflow-hiden rounded-2xl bg-[#1e6653] shadow py-6">
+                <a href="/kelas" class=" soverflow-hiden rounded-2xl bg-[#008DD5] shadow py-6">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
                         stroke="currentColor" class="w-16 h-16 mb-2 m-auto  justify-center text-white">
                         <path fill-rule="evenodd"
@@ -63,7 +62,7 @@
                         KELAS
                     </dt>
                 </a>
-                <a href="/jadwal" class=" soverflow-hiden rounded-2xl bg-[#1e6653] shadow py-6">
+                <a href="/jadwal" class=" soverflow-hiden rounded-2xl bg-[#008DD5] shadow py-6">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
                         stroke="currentColor" class="w-16 h-16 mb-2 m-auto  justify-center text-white">
                         <path
@@ -76,7 +75,7 @@
                         JADWAL
                     </dt>
                 </a>
-                <a href="/user" class=" soverflow-hiden rounded-2xl bg-[#1e6653] shadow py-6">
+                <a href="/user" class=" soverflow-hiden rounded-2xl bg-[#008DD5] shadow py-6">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
                         stroke="currentColor" class="w-16 h-16 mb-2 m-auto  justify-center text-white">
                         <path fill-rule="evenodd"

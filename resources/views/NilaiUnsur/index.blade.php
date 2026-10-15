@@ -126,15 +126,15 @@ if ($n == 0) {
     $nrr = $nrr1 + $nrr2 + $nrr3 + $nrr4 + $nrr5 + $nrr6 + $nrr7 + $nrr8 + $nrr9;
     $nrr = sprintf('%0.3f', $nrr);
 
-    $nrrt1 = sprintf('%0.3f', $nrr1 * 0.111);
-    $nrrt2 = sprintf('%0.3f', $nrr2 * 0.111);
-    $nrrt3 = sprintf('%0.3f', $nrr3 * 0.111);
-    $nrrt4 = sprintf('%0.3f', $nrr4 * 0.111);
-    $nrrt5 = sprintf('%0.3f', $nrr5 * 0.111);
-    $nrrt6 = sprintf('%0.3f', $nrr6 * 0.111);
-    $nrrt7 = sprintf('%0.3f', $nrr7 * 0.111);
-    $nrrt8 = sprintf('%0.3f', $nrr8 * 0.111);
-    $nrrt9 = sprintf('%0.3f', $nrr9 * 0.111);
+    $nrrt1 = sprintf('%0.3f', $nrr1 * (1/9));
+    $nrrt2 = sprintf('%0.3f', $nrr2 * (1/9));
+    $nrrt3 = sprintf('%0.3f', $nrr3 * (1/9));
+    $nrrt4 = sprintf('%0.3f', $nrr4 * (1/9));
+    $nrrt5 = sprintf('%0.3f', $nrr5 * (1/9));
+    $nrrt6 = sprintf('%0.3f', $nrr6 * (1/9));
+    $nrrt7 = sprintf('%0.3f', $nrr7 * (1/9));
+    $nrrt8 = sprintf('%0.3f', $nrr8 * (1/9));
+    $nrrt9 = sprintf('%0.3f', $nrr9 * (1/9));
 
     $nrrT = $nrrt1 + $nrrt2 + $nrrt3 + $nrrt4 + $nrrt5 + $nrrt6 + $nrrt7 + $nrrt8 + $nrrt9;
     $nrrT = sprintf('%0.3f', $nrrT);
@@ -147,16 +147,13 @@ if ($n == 0) {
 @extends('layouts.index', ['title' => 'Dashboard'])
 
 @section('content')
-    <div class="absolute top-0 left-[215px] h-screen w-10/12 p-2">
-        <div class="bg-white h-full w-full rounded-xl p-3  mb-2">
-            <div class="flex w-full justify-between items-center -mt-3">
-                <p class="text-[25px] font-black text-[#01683d]">RESUME / PENDIDIKAN</p>
-                <div class="flex justify-between items-center py-4 ">
-                    <div>
-                        <label class="text-white font-bold text-xl"> </label>
-                    </div>
-                    <?php
+    <div class="absolute top-0 left-[215px] right-2 bottom-2 p-2">
+        <div class="bg-white h-full w-full rounded-xl p-4 shadow-sm border border-slate-200">
+            <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3 pb-4">
+                <p class="text-[22px] lg:text-[28px] font-black text-[#008DD5] leading-tight">RESUME / NILAI UNSUR</p>
 
+                <div class="flex flex-wrap items-center justify-end gap-3">
+                    <?php
                     error_reporting(0);
                     if ($_GET['triwulan'] == '') {
                     } else {
@@ -168,416 +165,163 @@ if ($n == 0) {
                         $_SESSION['tw'] = $_GET['tw'];
                     }
                     ?>
-                    <div class="flex flex-row items-center gap-3">
 
-                        {{-- tahun --}}
-                        <div class="flex flex-row items-center gap-3 mb-5 lg:mb-0">
-                            <label for="countries" class=" font-bold text-[#01683d] text-5xl lg:text-base ">
-                                Tahun</label>
-
-                            <?php if($_GET['Tahun'] == ''){ ?>
-                            <select id="countries" id="language"
-                                onChange="document.location.href='?jenkel=1&usia=1&pekerjaan=1&pendidikan=1&tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value   "
-                                class="bg-white border border-gray-300 text-[#01683d] font-bold text-5xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
-                                <option value="2023" <?php if (date('Y') == '2023') {
-                                    echo 'selected';
-                                } else {
-                                } ?>>2023</option>
-
-                                <option value="2024" <?php if (date('Y') == '2024') {
-                                    echo 'selected';
-                                } else {
-                                } ?>>2024</option>
-
-                                <option value="2025" <?php if (date('Y') == '2025') {
-                                    echo 'selected';
-                                } else {
-                                } ?>>2025</option>
-                            </select>
-                            <?php  } else {?>
-                            <select id="countries" id="language"
-                                onChange="document.location.href='?jenkel=1&usia=1&pekerjaan=1&pendidikan=1&tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value   "
-                                class="bg-white border border-gray-300 text-[#01683d] font-bold text-5xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
-                                <option value="2023" <?php
-                                if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2025') {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>2023</option>
-
-                                <option value="2024" <?php
-                                if ($_GET['Tahun'] == '2024') {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>2024</option>
-
-                                <option value="2025" <?php
-                                if ($_GET['Tahun'] == '2025') {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>2025</option>
-                            </select>
-                            <?php
-                    }?>
-
-                        </div>
-
-                        {{-- tw --}}
-
-                        <div class="flex flex-row items-center gap-3 mb-5 lg:mb-0">
-                            <label for="countries" class=" font-bold text-[#155748] text-5xl lg:text-base">
-                                Triwulan</label>
-                            <?php if($_GET['tw'] == ''){ ?>
-                            <select id="countries" id="language"
-                                onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }} "
-                                class="bg-white border border-gray-300 text-[#155748] font-bold text-5xl w-full text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
-
-                                <option value="1" <?php if (date('m') == 1) {
-                                    echo 'selected';
-                                } else {
-                                } ?>>Triwulan 1 (Jan, Feb, Mar)</option>
-
-                                <option value="2" <?php if (date('m') == 2) {
-                                    echo 'selected';
-                                } else {
-                                } ?>>Triwulan 2 (Apr, Mei, Jun)</option>
-
-                                <option value="3" <?php if (date('m') == 3) {
-                                    echo 'selected';
-                                } else {
-                                } ?>>Triwulan 2 (Jan s/d Jun)</option>
-
-                                <option value="4" <?php if (date('m') == 4) {
-                                    echo 'selected';
-                                } else {
-                                } ?>>Triwulan 3 (Jul, Agu, Sep)</option>
-
-                                <option value="5" <?php if (date('m') == 5) {
-                                    echo 'selected';
-                                } else {
-                                } ?>>Triwulan 3 (Jan s/d Sep)</option>
-
-                                <option value="6" <?php if (date('m') == 6) {
-                                    echo 'selected';
-                                } else {
-                                } ?>>Triwulan 4 (Okt, Nop, Des)</option>
-
-                                <option value="7" <?php if (date('m') == 7) {
-                                    echo 'selected';
-                                } else {
-                                } ?>>Triwulan 4 (Jan s/d Des)</option>
-                            </select>
-                            <?php  } else {?>
-                            <select id="countries" id="language"
-                                onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }}"
-                                class="bg-white border border-gray-300 text-[#155748] font-bold text-5xl w-[300px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
-
-                                <option value="1" <?php
-                                if ($_GET['tw'] == 1) {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>Triwulan 1 (Jan, Feb, Mar)</option>
-
-                                <option value="2" <?php
-                                if ($_GET['tw'] == 2) {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>Triwulan 2 (Apr, Mei, Jun)</option>
-
-                                <option value="3" <?php
-                                if ($_GET['tw'] == 3) {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>Triwulan 2 (Jan s/d Jun)</option>
-
-                                <option value="4" <?php
-                                if ($_GET['tw'] == 4) {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>Triwulan 3 (Jul, Agu, Sep)</option>
-
-                                <option value="5" <?php
-                                if ($_GET['tw'] == 5) {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>Triwulan 3 (Jan s/d Sep)</option>
-
-                                <option value="6" <?php
-                                if ($_GET['tw'] == 6) {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>Triwulan 4 (Okt, Nop, Des)</option>
-
-                                <option value="7" <?php
-                                if ($_GET['tw'] == 7) {
-                                    echo 'selected';
-                                } else {
-                                }
-                                ?>>Triwulan 4 (Jan s/d Des)</option>
-                            </select>
-                            <?php
-                    }?>
-
-                        </div>
-
-                        {{-- download --}}
-                        <a href="/exportResume?jenkel={{ $_GET['jenkel'] }}&usia={{ $_GET['usia'] }}&pekerjaan={{ $_GET['pekerjaan'] }}&pendidikan={{ $_GET['pendidikan'] }}&tahun={{ $_GET['tahun'] }}"
-                            class="py-1 text-center items-center  bg-[#155748] rounded-full font-bold text-sm px-3  w-full  text-white"
-                            style="font-family:'Roboto'">
-                            <p>DOWNLOAD</p>
-                        </a>
+                    <div class="flex items-center gap-2 rounded-full border border-[#008DD5] bg-slate-50 px-3 py-2">
+                        <label class="text-sm font-bold text-[#008DD5]">Tahun</label>
+                        <?php if($_GET['Tahun'] == ''){ ?>
+                        <select
+                            onChange="document.location.href='?jenkel=1&usia=1&pekerjaan=1&pendidikan=1&tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value"
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-sm rounded-full px-3 py-1 focus:outline-none focus:ring-2 focus:ring-[#008DD5]/30">
+                            <option value="2023" <?php if (date('Y') == '2023') echo 'selected'; ?>>2023</option>
+                            <option value="2024" <?php if (date('Y') == '2024') echo 'selected'; ?>>2024</option>
+                            <option value="2025" <?php if (date('Y') == '2025') echo 'selected'; ?>>2025</option>
+                            <option value="2026" <?php if (date('Y') == '2026') echo 'selected'; ?>>2026</option>
+                        </select>
+                        <?php } else { ?>
+                        <select
+                            onChange="document.location.href='?jenkel=1&usia=1&pekerjaan=1&pendidikan=1&tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value"
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-sm rounded-full px-3 py-1 focus:outline-none focus:ring-2 focus:ring-[#008DD5]/30">
+                            <option value="2023" <?php if ($_GET['Tahun'] == '2023') echo 'selected'; ?>>2023</option>
+                            <option value="2024" <?php if ($_GET['Tahun'] == '2024') echo 'selected'; ?>>2024</option>
+                            <option value="2025" <?php if ($_GET['Tahun'] == '2025') echo 'selected'; ?>>2025</option>
+                            <option value="2026" <?php if ($_GET['Tahun'] == '2026') echo 'selected'; ?>>2026</option>
+                        </select>
+                        <?php } ?>
                     </div>
+
+                    <div class="flex items-center gap-2 rounded-full border border-[#008DD5] bg-slate-50 px-3 py-2">
+                        <label class="text-sm font-bold text-[#008DD5]">Triwulan</label>
+                        <?php if($_GET['tw'] == ''){ ?>
+                        <select
+                            onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }}"
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-sm rounded-full px-3 py-1 focus:outline-none focus:ring-2 focus:ring-[#008DD5]/30">
+                            <option value="1" <?php if (date('m') == 1) echo 'selected'; ?>>Triwulan 1 (Jan, Feb, Mar)</option>
+                            <option value="2" <?php if (date('m') == 2) echo 'selected'; ?>>Triwulan 2 (Apr, Mei, Jun)</option>
+                            <option value="3" <?php if (date('m') == 3) echo 'selected'; ?>>Triwulan 2 (Jan s/d Jun)</option>
+                            <option value="4" <?php if (date('m') == 4) echo 'selected'; ?>>Triwulan 3 (Jul, Agu, Sep)</option>
+                            <option value="5" <?php if (date('m') == 5) echo 'selected'; ?>>Triwulan 3 (Jan s/d Sep)</option>
+                            <option value="6" <?php if (date('m') == 6) echo 'selected'; ?>>Triwulan 4 (Okt, Nop, Des)</option>
+                            <option value="7" <?php if (date('m') == 7) echo 'selected'; ?>>Triwulan 4 (Jan s/d Des)</option>
+                        </select>
+                        <?php } else { ?>
+                        <select
+                            onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }}"
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-sm rounded-full px-3 py-1 focus:outline-none focus:ring-2 focus:ring-[#008DD5]/30">
+                            <option value="1" <?php if ($_GET['tw'] == 1) echo 'selected'; ?>>Triwulan 1 (Jan, Feb, Mar)</option>
+                            <option value="2" <?php if ($_GET['tw'] == 2) echo 'selected'; ?>>Triwulan 2 (Apr, Mei, Jun)</option>
+                            <option value="3" <?php if ($_GET['tw'] == 3) echo 'selected'; ?>>Triwulan 2 (Jan s/d Jun)</option>
+                            <option value="4" <?php if ($_GET['tw'] == 4) echo 'selected'; ?>>Triwulan 3 (Jul, Agu, Sep)</option>
+                            <option value="5" <?php if ($_GET['tw'] == 5) echo 'selected'; ?>>Triwulan 3 (Jan s/d Sep)</option>
+                            <option value="6" <?php if ($_GET['tw'] == 6) echo 'selected'; ?>>Triwulan 4 (Okt, Nop, Des)</option>
+                            <option value="7" <?php if ($_GET['tw'] == 7) echo 'selected'; ?>>Triwulan 4 (Jan s/d Des)</option>
+                        </select>
+                        <?php } ?>
+                    </div>
+
+                    <a href="/exportResume?jenkel={{ $_GET['jenkel'] }}&usia={{ $_GET['usia'] }}&pekerjaan={{ $_GET['pekerjaan'] }}&pendidikan={{ $_GET['pendidikan'] }}&tahun={{ $_GET['tahun'] }}"
+                        class="inline-flex items-center justify-center bg-[#008DD5] hover:bg-[#0077b8] rounded-full font-bold text-sm px-4 py-2 text-white transition">
+                        DOWNLOAD
+                    </a>
                 </div>
             </div>
 
-            <div class="w-full ">
-                <div class="-m-1.5  ">
-                    <div class="p-1.5 ">
-                        <div class="border border-[#02A859] rounded-lg overflow-hidden h-[335px]">
-                            <table class="w-full divide-y divide-gray-200 ">
-                                <thead
-                                    style="background-color: #51a592;
-                                        background-image:
-                                            radial-gradient(at -30% -30%, #02A859, transparent 80%),
-                                            radial-gradient(at 130% 150%, #02A859, transparent 80%);">
-                                    <tr>
-                                        <th scope="col" rowspan="2"
-                                            class="px-6 py-3 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            No.<br>RESPONDEN</th>
-                                        <th scope="col" colspan="10"
-                                            class=" px-6 px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase ">
-                                            NILAI UNSUR PELAYANAN</th>
+            <div class="w-full">
+                <div class="rounded-xl border border-[#008DD5] overflow-hidden">
+                    <div class="overflow-auto max-h-[52vh]">
+                        <table class="min-w-[820px] w-full border-collapse">
+                            <thead class="sticky top-0 z-10" style="background-color: #008DD5; background-image: radial-gradient(at -30% -30%, #008DD5, transparent 80%), radial-gradient(at 130% 150%, #008DD5, transparent 80%);">
+                                <tr>
+                                    <th scope="col" rowspan="2" class="px-3 py-3 w-[90px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">No.<br>Responden</th>
+                                    <th scope="col" colspan="10" class="px-3 py-2 text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">Nilai Unsur Pelayanan</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U1</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U2</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U3</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U4</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U5</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U6</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U7</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U8</th>
+                                    <th scope="col" class="px-2 py-2 w-[70px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">U9</th>
+                                    <th scope="col" class="px-2 py-2 w-[90px] text-center text-[11px] font-semibold text-white uppercase border border-[#008DD5]">Hasil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $row = 1; ?>
+                                @forelse($selects as $data)
+                                    <tr class="{{ $row % 2 == 0 ? 'bg-[#E3E3E3]' : 'bg-white' }}">
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $row++ }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u1 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u2 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u3 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u4 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u5 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u6 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u7 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u8 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200">{{ $data->u9 }}</td>
+                                        <td class="px-3 py-2 text-center text-sm font-medium text-slate-700 border border-slate-200"></td>
                                     </tr>
-                                    <tr>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U1</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U2</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U3</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U4</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U5</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U6</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U7</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U8</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            U9</th>
-                                        <th scope="col"
-                                            class=" px-6 py-1 w-[50px] text-center text-xs font-medium text-white uppercase">
-                                            HASIL</th>
-                                    </tr>
-                                </thead>
-                                <div class="h-200 overflow-y-auto">
-                                    <tbody class="" style="overflow-y:auto;">
-                                        <?php $row = 1; ?>
-                                        @forelse($selects as $data)
-                                            <tr class="{{ $row % 2 == 0 ? 'bg-[#E3E3E3]' : '' }}">
-
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $row++ }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u1 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u2 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u3 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u4 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u5 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u6 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u7 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u8 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                                    {{ $data->u9 }}
-                                                </td>
-                                                <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-
-                                                </td>
-                                            </tr>
-                                        @empty
-                                        @endforelse
-
-                                    </tbody>
-                                </div>
-                            </table>
-                        </div>
-
-
-                        <div class="rounded-lg overflow-hidden  mt-1">
-                            <table class="w-full divide-y divide-gray-200 ">
-                                <thead
-                                    style="background-color: #51a592;
-    background-image:
-        radial-gradient(at -30% -30%, #02A859, transparent 100%),
-        radial-gradient(at 130% 150%, #02A859, transparent 100%);">
-                                    <tr class="border-b  text-white font-bold"
-                                        style="background-color: #51a592;
-    background-image:
-        radial-gradient(at -30% -30%, #02A859, transparent 100%),
-        radial-gradient(at 130% 150%, #02A859, transparent 100%);">
-                                        <td class="whitespace-nowrap  px-2 py-2 w-[150px] text-left font-medium">Total
-                                            Nilai
-                                            Unsur
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu1 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu2 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu3 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu4 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu5 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu6 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu7 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu8 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $tu9 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 w-[100px] text-center font-medium">
-                                            {{ $Ttl_Nilai_Unsur }}
-                                        </td>
-                                    </tr>
-                                    <tr class="border-b text-white font-bold"
-                                        style="background-color: #51a592;
-    background-image:
-        radial-gradient(at -30% -30%, #02A859, transparent 100%),
-        radial-gradient(at 130% 150%, #02A859, transparent 100%);">
-                                        <td class="whitespace-nowrap  px-2 py-2 w-[150px] text-left font-medium">
-                                            NRR Per Unsur
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr1 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr2 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr3 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr4 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr5 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr6 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr7 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr8 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrr9 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 w-[100px] text-center font-medium">
-                                            {{ $nrr }}
-                                        </td>
-                                    </tr>
-                                    <tr class="border-b text-white font-bold"
-                                        style="background-color: #51a592;
-    background-image:
-        radial-gradient(at -30% -30%, #02A859, transparent 100%),
-        radial-gradient(at 130% 150%, #02A859, transparent 100%);">
-                                        <td class="whitespace-nowrap  px-2 py-2 w-[150px] text-left font-medium">
-                                            NRR
-                                            Tertimbang
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt1 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt2 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt3 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt4 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt5 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt6 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt7 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt8 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 text-center font-medium">
-                                            {{ $nrrt9 }}
-                                        </td>
-                                        <td class="whitespace-nowrap  px-2 py-2 w-[100px] text-center font-medium">
-                                            {{ $nrrT }}
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                            </table>
-                        </div>
-
-                        <div class="mt-2">
-                            {{ $selects->links() }}
-                        </div>
+                                @empty
+                                @endforelse
+                            </tbody>
+                        </table>
                     </div>
+                </div>
+
+                <div class="mt-3 rounded-xl border border-[#008DD5] overflow-hidden">
+                    <table class="min-w-[820px] w-full border-collapse">
+                        <thead style="background-color: #008DD5; background-image: radial-gradient(at -30% -30%, #008DD5, transparent 100%), radial-gradient(at 130% 150%, #008DD5, transparent 100%);">
+                            <tr class="text-white">
+                                <td class="px-3 py-2 text-left text-sm font-semibold border border-[#008DD5]">Total Nilai Unsur</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu1 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu2 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu3 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu4 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu5 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu6 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu7 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu8 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $tu9 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $Ttl_Nilai_Unsur }}</td>
+                            </tr>
+                            <tr class="text-white">
+                                <td class="px-3 py-2 text-left text-sm font-semibold border border-[#008DD5]">NRR Per Unsur</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr1 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr2 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr3 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr4 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr5 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr6 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr7 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr8 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr9 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrr }}</td>
+                            </tr>
+                            <tr class="text-white">
+                                <td class="px-3 py-2 text-left text-sm font-semibold border border-[#008DD5]">NRR Tertimbang</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt1 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt2 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt3 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt4 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt5 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt6 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt7 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt8 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrt9 }}</td>
+                                <td class="px-3 py-2 text-center text-sm font-semibold border border-[#008DD5]">{{ $nrrT }}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="mt-3">
+                    {{ $selects->links() }}
                 </div>
             </div>
         </div>
     </div>
-    </div>
-
     <script src="https://cdn.ckeditor.com/4.12.0/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('content');

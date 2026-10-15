@@ -47,7 +47,7 @@ if ($_GET['tw'] == null) {
             ->whereBetween('created_at', [$startDate, $endDate])
             ->paginate(10);
 
-        if($_GET['Tahun']==2023 or $_GET['Tahun']==2025){
+        if($_GET['Tahun']==2023 ){
             $selects = DB::table('2023')
             ->whereBetween('created_at', [$startDate, $endDate])
             ->paginate(10);}
@@ -86,13 +86,14 @@ if ($_GET['tw'] == null) {
         // return $request->jenkel['jenkel'];
 
         $this->validate($request, [
-            'nik' => 'required|string|min:18',
-            'nik' => 'required|string|max:18',
+            'nik' => 'required|string|min:16|max:16',
             'nama' => 'required',
             'jenisPelayanan' => 'required',
             'nohp' => 'required',
+            'keperluan' => 'required',
             'jenkel' => 'required',
             'alamat' => 'required',
+            'foto_ktp' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'usia' => 'required',
             'u1' => 'required',
             'u2' => 'required',
@@ -114,10 +115,17 @@ if ($_GET['tw'] == null) {
         // $data->save();
         // return redirect()->back();
 
+        $fotoKtpPath = null;
+        if ($request->hasFile('foto_ktp')) {
+            $fotoKtpPath = $request->file('foto_ktp')->store('ktp', 'public');
+        }
+
         $store = NilaiUnsur::create([
             'jenisPelayanan' => $request->jenisPelayanan,
             'nama' => $request->nama,
             'alamat' => $request->alamat,
+            'keperluan' => $request->keperluan,
+            'foto_ktp' => $fotoKtpPath,
             'pekerjaan' => $request->pekerjaan,
             'jenkel' => $request->jenkel['jenkel'],
             'usia' => $request->usia,

@@ -101,7 +101,7 @@ for ($i = 1; $i <= 12; $i++) {
     $x;
     $y;
     for ($j = 1; $j <= 9; $j++) {
-        $nrrTx = $nrr[$i][$j - 1] * 0.111;
+        $nrrTx = $nrr[$i][$j - 1] * (1/9);
         array_push($x, round($nrrTx, 2));
         $y = $y + $nrrTx;
     }
@@ -225,15 +225,15 @@ if ($n == 0) {
     $nrr = $nrr1 + $nrr2 + $nrr3 + $nrr4 + $nrr5 + $nrr6 + $nrr7 + $nrr8 + $nrr9;
     $nrr = sprintf('%0.2f', $nrr);
 
-    $nrrt1 = sprintf('%0.2f', $nrr1 * 0.111);
-    $nrrt2 = sprintf('%0.2f', $nrr2 * 0.111);
-    $nrrt3 = sprintf('%0.2f', $nrr3 * 0.111);
-    $nrrt4 = sprintf('%0.2f', $nrr4 * 0.111);
-    $nrrt5 = sprintf('%0.2f', $nrr5 * 0.111);
-    $nrrt6 = sprintf('%0.2f', $nrr6 * 0.111);
-    $nrrt7 = sprintf('%0.2f', $nrr7 * 0.111);
-    $nrrt8 = sprintf('%0.2f', $nrr8 * 0.111);
-    $nrrt9 = sprintf('%0.2f', $nrr9 * 0.111);
+    $nrrt1 = sprintf('%0.2f', $nrr1 * (1/9));
+    $nrrt2 = sprintf('%0.2f', $nrr2 * (1/9));
+    $nrrt3 = sprintf('%0.2f', $nrr3 * (1/9));
+    $nrrt4 = sprintf('%0.2f', $nrr4 * (1/9));
+    $nrrt5 = sprintf('%0.2f', $nrr5 * (1/9));
+    $nrrt6 = sprintf('%0.2f', $nrr6 * (1/9));
+    $nrrt7 = sprintf('%0.2f', $nrr7 * (1/9));
+    $nrrt8 = sprintf('%0.2f', $nrr8 * (1/9));
+    $nrrt9 = sprintf('%0.2f', $nrr9 * (1/9));
 
     $nrrT = $nrrt1 + $nrrt2 + $nrrt3 + $nrrt4 + $nrrt5 + $nrrt6 + $nrrt7 + $nrrt8 + $nrrt9;
     $nrrT = sprintf('%0.2f', $nrrT);
@@ -290,13 +290,12 @@ if ($n == 0) {
 
 </head>
 
-<body class="items-center
- bg-black sm:bg-red-800 md:bg-orange-800 lg:bg-green-800 xl:bg-blue-800
- h-full w-full"
+<body class="items-center h-full w-full relative" style="background-color: #06336b;"
     {{-- style="background-image:
-        radial-gradient(at -30% -30%, #009E61, transparent 80%),
-        radial-gradient(at 130% 150%, #009E61, transparent 80%);" --}}>
+        radial-gradient(at -30% -30%, #008DD5, transparent 80%),
+        radial-gradient(at 130% 150%, #008DD5, transparent 80%);" --}}>
 
+    @include('partials.paser-bg')
     <div class="">
     </div>
 
@@ -323,8 +322,8 @@ if ($n == 0) {
                     label: 'Nilai SKM',
                     data: data,
                     borderWidth: 1,
-                    borderColor: '#007F4E',
-                    backgroundColor: '#007F4E',
+                    borderColor: '#008DD5',
+                    backgroundColor: '#008DD5',
 
                 }]
             },

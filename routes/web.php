@@ -22,6 +22,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/portal', function () {
+    return view('portal');
+});
+
 Route::get('/skm', function () {
     return view('skm');
 });

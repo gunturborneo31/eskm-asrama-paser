@@ -9,6 +9,8 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
+use function explode;
+use function gettype;
 use function is_array;
 use function is_object;
 use function is_string;
@@ -68,8 +70,8 @@ final class IsIdentical extends Constraint
                 $f = new ComparisonFailure(
                     $this->value,
                     $other,
-                    Exporter::export($this->value, true),
-                    Exporter::export($other, true),
+                    Exporter::export($this->value),
+                    Exporter::export($other),
                 );
             }
 
@@ -82,14 +84,14 @@ final class IsIdentical extends Constraint
     /**
      * Returns a string representation of the constraint.
      */
-    public function toString(bool $exportObjects = false): string
+    public function toString(): string
     {
         if (is_object($this->value)) {
             return 'is identical to an object of class "' .
                 $this->value::class . '"';
         }
 
-        return 'is identical to ' . Exporter::export($this->value, $exportObjects);
+        return 'is identical to ' . Exporter::export($this->value);
     }
 
     /**
@@ -102,6 +104,10 @@ final class IsIdentical extends Constraint
     {
         if (is_object($this->value) && is_object($other)) {
             return 'two variables reference the same object';
+        }
+
+        if (explode(' ', gettype($this->value), 2)[0] === 'resource' && explode(' ', gettype($other), 2)[0] === 'resource') {
+            return 'two variables reference the same resource';
         }
 
         if (is_string($this->value) && is_string($other)) {

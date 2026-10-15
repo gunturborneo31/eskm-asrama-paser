@@ -4,7 +4,7 @@
     <div class="absolute top-0 left-[215px] h-screen w-10/12 p-2">
         <div class="bg-white h-full w-full rounded-xl p-3  mb-2">
             <div class="flex w-full justify-between items-center -mt-3">
-                <p class="text-[25px] font-black text-[#01683d]">RESUME / SARAN DAN MASUKAN</p>
+                <p class="text-[25px] font-black text-[#008DD5]">RESUME / SARAN DAN MASUKAN</p>
                 <div class="flex justify-between items-center py-4 ">
                     <div>
                         <label class="text-white font-bold text-xl"> </label>
@@ -26,12 +26,12 @@
 
                         {{-- tahun --}}
                         <div class="flex flex-row items-center gap-2">
-                            <label for="countries" class=" font-bold text-[#01683d] text-sm ">
+                            <label for="countries" class=" font-bold text-[#008DD5] text-sm ">
                                 Tahun</label>
                             <?php if($_GET['Tahun'] == ''){ ?>
                             <select id="tahun"
                                 onChange="document.location.href='saranDanMasukan?filter=' + {{ $_GET['filter'] == null ? '1' : $_GET['filter'] }} + '&Tahun=' + this.value + '&Bulan=' + {{ $_GET['Bulan'] == null ? '1' : $_GET['Bulan'] }} "
-                                class="bg-white border border-gray-300 text-[#005C3A] font-bold text-sm rounded-full px-3 py-1">
+                                class="bg-white border border-gray-300 text-[#008DD5] font-bold text-sm rounded-full px-3 py-1">
                                 <option value="2023" <?php if (date('Y') == '2023') {
                                 } else {
                                 } ?>>2023</option>
@@ -44,11 +44,17 @@
                                 <option value="2025" <?php if (date('Y') == '2025') {
                                 } else {
                                 } ?>>2025</option>
+
+                                <option value="2026" <?php if (date('Y') == '2026') {
+                                    echo 'selected';
+                                } else {
+                                } ?>>2026</option>
+                                
                             </select>
                             <?php  } else {?>
                             <select id="tahun"
                                 onChange="document.location.href='saranDanMasukan?filter=' + {{ $_GET['filter'] == null ? '1' : $_GET['filter'] }} + '&Tahun=' + this.value + '&Bulan=' + {{ $_GET['Bulan'] == null ? '1' : $_GET['Bulan'] }} "
-                                class="bg-white border border-gray-300 text-[#005C3A] font-bold   text-sm rounded-full px-3 py-1">
+                                class="bg-white border border-gray-300 text-[#008DD5] font-bold   text-sm rounded-full px-3 py-1">
                                 <option value="2023" <?php
                                 if ($_GET['Tahun'] == '2023') {
                                     echo 'selected';
@@ -69,6 +75,13 @@
                                 } else {
                                 }
                                 ?>>2025</option>
+
+                                <option value="2026" <?php
+                                if ($_GET['Tahun'] == '2026') {
+                                    echo 'selected';
+                                } else {
+                                }
+                                ?>>2026</option>
                             </select>
                             <?php
                     }?>
@@ -76,11 +89,11 @@
                         </div>
                         {{-- bulan --}}
                         <div class="flex flex-row items-center gap-2">
-                            <label for="countries" class=" font-bold text-[#01683d] text-sm ">
+                            <label for="countries" class=" font-bold text-[#008DD5] text-sm ">
                                 Bulan</label>
                             <select id="countries" id="language"
                                 onChange="document.location.href='saranDanMasukan?filter=' + {{ $_GET['filter'] == null ? '1' : $_GET['filter'] }} + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }} + '&Bulan=' + this.value "
-                                class="bg-white border border-gray-300 text-[#01683d] border-[#01683d] font-bold   text-sm rounded-full px-3 py-1">
+                                class="bg-white border border-gray-300 text-[#008DD5] border-[#008DD5] font-bold   text-sm rounded-full px-3 py-1">
                                 <option value="1" <?php
                                 if ($_GET['Bulan'] == '1') {
                                     echo 'selected';
@@ -169,7 +182,7 @@
 
                         {{-- download --}}
                         <a href="/exportSaranMasukan?filter={{ $_GET['filter'] == null ? 1 : $_GET['filter'] }}&Tahun={{ $_GET['Tahun'] == null ? 1 : $_GET['Tahun'] }}&Bulan={{ $_GET['Bulan'] == null ? 1 : $_GET['Bulan'] }}"
-                            class="py-1 text-center items-center  bg-[#155748] rounded-full font-bold text-sm px-3  w-full  text-white"
+                            class="py-1 text-center items-center  bg-[#008DD5] rounded-full font-bold text-sm px-3  w-full  text-white"
                             style="font-family:'Roboto'">
                             <p>DOWNLOAD</p>
                         </a>
@@ -181,9 +194,9 @@
             <div class="w-full ">
                 <div class="-m-1.5  ">
                     <div class="p-1.5 ">
-                        <div class="border border-[#1d6835] rounded-lg overflow-hidden h-[460px]">
+                        <div class="border border-[#008DD5] rounded-lg overflow-hidden h-[460px]">
                             <table class="w-full divide-y divide-gray-200 ">
-                                <thead class="bg-gradient-to-br from-[#1d6835] to-[#007e3f]">
+                                <thead class="bg-gradient-to-br from-[#008DD5] to-[#008DD5]">
                                     <tr>
                                         <th scope="col"
                                             class="px-6 py-3 w-[50px] text-center text-xs font-medium text-white uppercase">

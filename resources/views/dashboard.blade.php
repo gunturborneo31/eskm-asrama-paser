@@ -146,6 +146,7 @@ $pekerjaan_6 = DB::table('2024')
 <html class="scroll-smooth">
 
 <head>
+    <title>E-SKM - Unit Penghubung Kabupaten Paser Juanda, Samarinda</title>
     <meta charset="utf-8">
     <meta name="viewport" conteitial-scale="1.0">
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -158,28 +159,22 @@ $pekerjaan_6 = DB::table('2024')
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="items-center bg-fixed w-full grid grid-cols-1"
-    style="
-    background-color: #51a592;
-    background-image:
-        radial-gradient(at -30% -30%, #02A859, transparent 80%),
-        radial-gradient(at 130% 150%, #02A859, transparent 80%);">
+<body class="items-center w-full grid grid-cols-1 relative" style="background-color: #06336b;">
+    @include('partials.paser-bg')
     <div class="h-screen lg:px-20 px-3 flex flex-col ">
         <div class="flex justify-between py-[20px] lg:py-1 items-center">
             <div class="flex items-center gap-3 justify-between w-full lg:justify-normal">
-                <img src="/assets/logo_kutai_timur.png" class="h-[100px] lg:h-[42px] p-0.5 rounded-xl bg-white"
-                    alt="">
-                <img src="/assets/disperindag.png" class="h-[100px] lg:h-[42px] p-0.5 rounded-xl bg-white"
-                    alt="">
+                <img src="/assets/logo_paser.png" class="h-[70px] lg:h-[48px] w-auto object-contain p-1 rounded-xl bg-white"
+                    alt="Logo Paser">
 
                 <div
                     class="rounded-full lg:whitespace-nowrap text-4xl lg:text-2xl font-bold text-white lg:text-left text-right drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
-                    E-SKM <br class="lg:hidden"> DISPERINDAG<br class="lg:hidden">Kab. KUTAI TIMUR
+                    E-SKM <br class="lg:hidden"> Unit Penghubung Kabupaten Paser <br class="lg:hidden"> Juanda, Samarinda
                 </div>
             </div>
             <div class="hidden lg:block">
                 <a href="/login">
-                    <div class="rounded-full whitespace-nowrap p-2 text-xs bg-white font-bold text-[#02A859] ">
+                    <div class="rounded-full whitespace-nowrap px-4 py-2 text-base bg-white font-bold text-[#008DD5] ">
                         Halaman Admin</div>
                 </a>
             </div>
@@ -197,7 +192,7 @@ $pekerjaan_6 = DB::table('2024')
                         <?php if($_GET['Tahun'] == ''){ ?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value "
-                            class="bg-white border border-gray-300 text-[#02A859] font-bold text-4xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-[250px] text-center lg:w-fit lg:text-base rounded-full px-3 py-1">
                             <option value="2023" <?php if (date('Y') == '2023') {
                                 echo 'selected';
                             } else {
@@ -212,11 +207,17 @@ $pekerjaan_6 = DB::table('2024')
                                 echo 'selected';
                             } else {
                             } ?>>2025</option>
+
+                            <option value="2026" <?php if (date('Y') == '2026') {
+                                echo 'selected';
+                            } else {
+                            } ?>>2026</option>
+
                         </select>
                         <?php  } else {?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value "
-                            class="bg-white border border-gray-300 text-[#02A859] font-bold text-4xl w-[250px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-[250px] text-center lg:w-fit lg:text-base rounded-full px-3 py-1">
                             <option value="2023" <?php
                             if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2025') {
                                 echo 'selected';
@@ -251,7 +252,7 @@ $pekerjaan_6 = DB::table('2024')
                         <?php if($_GET['tw'] == ''){ ?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }} "
-                            class="bg-white border border-gray-300 text-[#02A859] font-bold text-4xl w-full text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-full text-center lg:w-fit lg:text-base rounded-full px-3 py-1">
 
                             <option value="1" <?php if (date('m') == 1) {
                                 echo 'selected';
@@ -291,7 +292,7 @@ $pekerjaan_6 = DB::table('2024')
                         <?php  } else {?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }}"
-                            class="bg-white border border-gray-300 text-[#02A859] font-bold text-4xl w-[300px] text-center lg:w-fit lg:text-sm rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-[300px] text-center lg:w-fit lg:text-base rounded-full px-3 py-1">
 
                             <option value="1" <?php
                             if ($_GET['tw'] == 1) {
@@ -350,20 +351,20 @@ $pekerjaan_6 = DB::table('2024')
             </div>
         </div>
 
-        <div class="flex grid grid-cols-1 lg:grid-cols-2  gap-2  mb-5 h-full text-5xl lg:text-sm">
+        <div class="flex grid grid-cols-1 lg:grid-cols-2  gap-2  mb-5 h-full text-5xl lg:text-base">
             <div class="bg-white rounded-xl">
-                <p class="absolute p-3 font-bold text-[#1e6653]">Jenis Kelamin</p>
+                <p class="absolute p-3 font-bold text-[#008DD5]">Jenis Kelamin</p>
                 <div id="jenkel" class="mt-12 lg:mt-2 mx-auto p-2 w-2/3"></div>
             </div>
             <div class="bg-white rounded-xl p-3 flex flex-col justify-between">
-                <p class=" font-bold text-[#1e6653] mb-3">Jenis Kelamin</p>
+                <p class=" font-bold text-[#008DD5] mb-3">Jenis Kelamin</p>
                 <table class="w-full rounded-xl h-full">
                     <thead
-                        class="h-fit bg-gradient-to-br from-[#02A859]   to-[#008952] font-normal border text-sm text-white">
+                        class="h-fit bg-gradient-to-br from-[#008DD5]   to-[#008DD5] font-normal border text-sm text-white">
                         <tr class="">
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">No</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">Jenis Kelamin</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">No</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">Jenis Kelamin</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
                             </th>
                         </tr>
                     </thead>
@@ -394,18 +395,18 @@ $pekerjaan_6 = DB::table('2024')
                 </table>
             </div>
             <div class="bg-white rounded-xl ">
-                <p class="absolute p-3 font-bold text-[#1e6653]">Rentang Umur</p>
+                <p class="absolute p-3 font-bold text-[#008DD5]">Rentang Umur</p>
                 <div id="umur" class="mt-12 lg:mt-2 mx-auto p-2 w-2/3"></div>
             </div>
             <div class="bg-white rounded-xl p-3 flex flex-col justify-between">
-                <p class=" font-bold text-[#1e6653] mb-3">Rentang Umur</p>
+                <p class=" font-bold text-[#008DD5] mb-3">Rentang Umur</p>
                 <table class="w-full rounded-xl h-full">
                     <thead
-                        class="h-fit bg-gradient-to-br from-[#02A859]   to-[#008952] font-normal border text-sm text-white">
+                        class="h-fit bg-gradient-to-br from-[#008DD5]   to-[#008DD5] font-normal border text-sm text-white">
                         <tr class="">
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">No</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">Rentang Umur</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">No</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">Rentang Umur</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
                             </th>
                         </tr>
                     </thead>
@@ -458,18 +459,18 @@ $pekerjaan_6 = DB::table('2024')
                 </table>
             </div>
             <div class="bg-white rounded-xl ">
-                <p class="absolute p-3 font-bold text-[#1e6653]">Tingkat Pendidikan</p>
+                <p class="absolute p-3 font-bold text-[#008DD5]">Tingkat Pendidikan</p>
                 <div id="pendidikan" class="mt-12 lg:mt-2 mx-auto p-2 w-2/3"></div>
             </div>
             <div class="bg-white rounded-xl p-3 flex flex-col justify-between">
-                <p class=" font-bold text-[#1e6653] mb-3">Tingkat Pendidikan</p>
+                <p class=" font-bold text-[#008DD5] mb-3">Tingkat Pendidikan</p>
                 <table class="w-full rounded-xl h-full">
                     <thead
-                        class="h-fit bg-gradient-to-br from-[#02A859]   to-[#008952] font-normal border text-sm text-white">
+                        class="h-fit bg-gradient-to-br from-[#008DD5]   to-[#008DD5] font-normal border text-sm text-white">
                         <tr class="">
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">No</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">Tingkat Pendidikan</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">No</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">Tingkat Pendidikan</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
                             </th>
                         </tr>
                     </thead>
@@ -544,18 +545,18 @@ $pekerjaan_6 = DB::table('2024')
                 </table>
             </div>
             <div class="bg-white rounded-xl ">
-                <p class="absolute p-3 font-bold text-[#1e6653]">Jenis Pekerjaan</p>
+                <p class="absolute p-3 font-bold text-[#008DD5]">Jenis Pekerjaan</p>
                 <div id="pekerjaan" class="mt-12 lg:mt-2 mx-auto p-2 w-2/3"></div>
             </div>
             <div class="bg-white rounded-xl p-3 flex flex-col justify-between">
-                <p class=" font-bold text-[#1e6653] mb-3">Jenis Pekerjaan</p>
+                <p class=" font-bold text-[#008DD5] mb-3">Jenis Pekerjaan</p>
                 <table class="w-full rounded-xl h-full">
                     <thead
-                        class="h-fit bg-gradient-to-br from-[#02A859]   to-[#008952] font-normal border text-sm text-white">
+                        class="h-fit bg-gradient-to-br from-[#008DD5]   to-[#008DD5] font-normal border text-sm text-white">
                         <tr class="">
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">No</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1">Jenis Pekerjaan</th>
-                            <th scope="col" class="text-5xl lg:text-sm  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">No</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1">Jenis Pekerjaan</th>
+                            <th scope="col" class="text-5xl lg:text-base  px-4 py-5 lg:py-1 whitespace-nowrap">Jumlah
                             </th>
                         </tr>
                     </thead>
@@ -632,7 +633,7 @@ $pekerjaan_6 = DB::table('2024')
             <div class="lg:col-span-2">
                 <a href="/">
                     <button type="button"
-                        class="bg-white w-full b-0 p-3 mb-10 shadow-2xl text-5xl lg:text-xl font-semibold  rounded-2xl  text-[#1e6653] ">
+                        class="bg-white w-full b-0 p-3 mb-10 shadow-2xl text-5xl lg:text-xl font-semibold  rounded-2xl  text-[#008DD5] ">
                         KEMBALI KE DASHBOARD</button>
                 </a>
             </div>
@@ -646,7 +647,7 @@ $pekerjaan_6 = DB::table('2024')
             const getChartOptions = () => {
                 return {
                     series: [{{ $jenkel_l }}, {{ $jenkel_p }}],
-                    colors: ["#1e6653", "#16BDCA", "#e26666"],
+                    colors: ["#008DD5", "#16BDCA", "#e26666"],
                     chart: {
                         height: "auto",
                         width: "100%",
@@ -680,7 +681,7 @@ $pekerjaan_6 = DB::table('2024')
                     legend: {
                         position: "bottom",
                         fontFamily: "Inter, sans-serif",
-                        fontSize: "20%"
+                        fontSize: window.innerWidth < 1024 ? "34px" : "15px"
                     },
                     yaxis: {
                         labels: {
@@ -714,7 +715,7 @@ $pekerjaan_6 = DB::table('2024')
                     series: [{{ $umur_1 }}, {{ $umur_2 }},
                         {{ $umur_3 }}, {{ $umur_4 }}
                     ],
-                    colors: ["#1e6653", "#16BDCA", "#e26666", "#383838"],
+                    colors: ["#008DD5", "#16BDCA", "#e26666", "#383838"],
                     chart: {
                         height: "auto",
                         width: "100%",
@@ -750,7 +751,7 @@ $pekerjaan_6 = DB::table('2024')
                     legend: {
                         position: "bottom",
                         fontFamily: "Inter, sans-serif",
-                        fontSize: "20%"
+                        fontSize: window.innerWidth < 1024 ? "34px" : "15px"
                     },
                     yaxis: {
                         labels: {
@@ -785,7 +786,7 @@ $pekerjaan_6 = DB::table('2024')
                         {{ $pendidikan_3 }}, {{ $pendidikan_4 }}, {{ $pendidikan_5 }},
                         {{ $pendidikan_6 }}
                     ],
-                    colors: ["#1e6653", "#16BDCA", "#e26666", "#383838", "#ddf71d", "#521bd3"],
+                    colors: ["#008DD5", "#16BDCA", "#e26666", "#383838", "#ddf71d", "#521bd3"],
                     chart: {
                         height: "auto",
                         width: "100%",
@@ -819,7 +820,7 @@ $pekerjaan_6 = DB::table('2024')
                     legend: {
                         position: "bottom",
                         fontFamily: "Inter, sans-serif",
-                        fontSize: "20%"
+                        fontSize: window.innerWidth < 1024 ? "34px" : "15px"
                     },
                     yaxis: {
                         labels: {
@@ -854,7 +855,7 @@ $pekerjaan_6 = DB::table('2024')
                         {{ $pekerjaan_3 }}, {{ $pekerjaan_4 }}, {{ $pekerjaan_5 }},
                         {{ $pekerjaan_6 }}
                     ],
-                    colors: ["#1e6653", "#16BDCA", "#e26666", "#383838", "#ddf71d", "#521bd3"],
+                    colors: ["#008DD5", "#16BDCA", "#e26666", "#383838", "#ddf71d", "#521bd3"],
                     chart: {
                         height: "auto",
                         width: "100%",
@@ -888,7 +889,7 @@ $pekerjaan_6 = DB::table('2024')
                     legend: {
                         position: "bottom",
                         fontFamily: "Inter, sans-serif",
-                        fontSize: "20%"
+                        fontSize: window.innerWidth < 1024 ? "34px" : "15px"
                     },
                     yaxis: {
                         labels: {

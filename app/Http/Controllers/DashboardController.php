@@ -109,7 +109,7 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        if(($request->username=="admin@~!=") && ($request->password=="admin@~!=")){
+        if(($request->username=="admin") && ($request->password=="admin")){
             return redirect("/rekapTotal?jenkel=1&usia=1&pekerjaan=1&pendidikan=1&tw=".fmod(date('m'), 3)."&Tahun=".date('Y'));
         } else {
             return redirect("/login");

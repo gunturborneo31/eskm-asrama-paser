@@ -94,7 +94,7 @@ class ExportUsia implements FromCollection, WithHeadings, WithCustomStartCell,  
             ->get(['nik','nama','usia','created_at']);
         }
 
-        if($_GET['Tahun']==2023 or $_GET['Tahun']==2025){
+        if($_GET['Tahun']==2023 ){
             $selects = DB::table('2023')
 
             ->whereBetween('created_at', [$startDate, $endDate])

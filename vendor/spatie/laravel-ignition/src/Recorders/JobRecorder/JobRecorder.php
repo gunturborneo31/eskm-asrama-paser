@@ -72,14 +72,14 @@ class JobRecorder
         foreach ($payload as $key => $value) {
             if (! in_array($key, ['job', 'data', 'displayName'])) {
                 $properties[$key] = $value;
-
-                if (is_string($payload['data'])) {
-                    try {
-                        $properties['data'] = json_decode($payload['data'], true, 512, JSON_THROW_ON_ERROR);
-                    } catch (Exception $exception) {
-                    }
-                }
             }
+        }
+
+        try {
+            if (is_string($payload['data'])) {
+                $properties['data'] = json_decode($payload['data'], true, 512, JSON_THROW_ON_ERROR);
+            }
+        } catch (Exception $exception) {
         }
 
         if ($pushedAt = DateTime::createFromFormat('U.u', $payload->get('pushedAt', ''))) {
@@ -120,8 +120,6 @@ class JobRecorder
             })
             ->mapWithKeys(function (ReflectionProperty $property) use ($command) {
                 try {
-                    $property->setAccessible(true);
-
                     return [$property->name => $property->getValue($command)];
                 } catch (Error $error) {
                     return [$property->name => 'uninitialized'];

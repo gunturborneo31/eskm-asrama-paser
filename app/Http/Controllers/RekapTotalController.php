@@ -10,51 +10,59 @@ use App\Models\NilaiUnsur;
 
 class RekapTotalController extends Controller
 {
-    public function index()
+   public function index(Request $request)
     {
-               error_reporting(0);
+       error_reporting(0);
 
-$startDate = '2024-01-01';
+       $tahun = $request->input('Tahun') ?? date('Y');
+       $tw = $request->input('tw');
+       $search = trim((string) $request->input('search', ''));
 
-$endDate = '2024-10-03';
+       $startDate = '2024-01-01';
+       $endDate = '2024-10-03';
 
-if ($_GET['tw'] == null) {
-    $today = date('Y-m-d', strtotime('+1 days'));
-    $endDate = $today;
-} elseif ($_GET['tw'] == 1) {
-    $startDate = $_GET['Tahun'] . '-01-01';
-    $endDate = $_GET['Tahun'] . '-03-31';
-} elseif ($_GET['tw'] == 2) {
-    $startDate = $_GET['Tahun'] . '-04-01';
-    $endDate = $_GET['Tahun'] . '-06-31';
-} elseif ($_GET['tw'] == 3) {
-    $startDate = $_GET['Tahun'] . '-01-01';
-    $endDate = $_GET['Tahun'] . '-06-31';
-} elseif ($_GET['tw'] == 4) {
-    $startDate = $_GET['Tahun'] . '-07-01';
-    $endDate = $_GET['Tahun'] . '-09-31';
-} elseif ($_GET['tw'] == 5) {
-    $startDate = $_GET['Tahun'] . '-01-01';
-    $endDate = $_GET['Tahun'] . '-09-31';
-} elseif ($_GET['tw'] == 6) {
-    $startDate = $_GET['Tahun'] . '-10-01';
-    $endDate = $_GET['Tahun'] . '-12-31';
-} elseif ($_GET['tw'] == 7) {
-    $startDate = $_GET['Tahun'] . '-01-01';
-    $endDate = $_GET['Tahun'] . '-12-31';
-}   
+       if ($tw == null) {
+           $today = date('Y-m-d', strtotime('+1 days'));
+           $endDate = $today;
+       } elseif ($tw == 1) {
+           $startDate = $tahun . '-01-01';
+           $endDate = $tahun . '-03-31';
+       } elseif ($tw == 2) {
+           $startDate = $tahun . '-04-01';
+           $endDate = $tahun . '-06-31';
+       } elseif ($tw == 3) {
+           $startDate = $tahun . '-01-01';
+           $endDate = $tahun . '-06-31';
+       } elseif ($tw == 4) {
+           $startDate = $tahun . '-07-01';
+           $endDate = $tahun . '-09-31';
+       } elseif ($tw == 5) {
+           $startDate = $tahun . '-01-01';
+           $endDate = $tahun . '-09-31';
+       } elseif ($tw == 6) {
+           $startDate = $tahun . '-10-01';
+           $endDate = $tahun . '-12-31';
+       } elseif ($tw == 7) {
+           $startDate = $tahun . '-01-01';
+           $endDate = $tahun . '-12-31';
+       }
 
-        $selects = DB::table('2024')
-            ->whereBetween('created_at', [$startDate, $endDate])
-            ->paginate(10);
+       $table = ($tahun == 2023) ? '2023' : '2024';
 
-        if($_GET['Tahun']==2023 or $_GET['Tahun']==2025){
-            $selects = DB::table('2023')
-            ->whereBetween('created_at', [$startDate, $endDate])
-            ->paginate(10);}
+       $query = DB::table($table)
+           ->whereBetween('created_at', [$startDate, $endDate]);
 
-        return view('RekapTotal.index', compact('selects'));
-    }
+       if (!empty($search)) {
+           $query->where(function ($q) use ($search) {
+               $q->where('nama', 'like', '%' . $search . '%')
+                   ->orWhere('nik', 'like', '%' . $search . '%');
+           });
+       }
+
+      $selects = $query->paginate(10)->appends($request->query());
+
+      return view('RekapTotal.index', compact('selects', 'tahun'));
+   }
 
 
     public function cariNilaiUnsur(Request $request)

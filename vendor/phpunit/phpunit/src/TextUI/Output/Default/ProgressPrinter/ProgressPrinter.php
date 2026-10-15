@@ -33,6 +33,8 @@ use PHPUnit\TextUI\Output\Printer;
 use PHPUnit\Util\Color;
 
 /**
+ * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+ *
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
 final class ProgressPrinter
@@ -92,6 +94,13 @@ final class ProgressPrinter
         }
     }
 
+    public function testSuiteSkipped(int $countTests): void
+    {
+        for ($i = 0; $i < $countTests; $i++) {
+            $this->testSkipped();
+        }
+    }
+
     public function testMarkedIncomplete(): void
     {
         $this->updateTestStatus(TestStatus::incomplete());
@@ -104,7 +113,7 @@ final class ProgressPrinter
         }
 
         if ($this->source->restrictNotices() &&
-            !(new SourceFilter)->includes($this->source, $event->file())) {
+            !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -122,7 +131,7 @@ final class ProgressPrinter
         }
 
         if ($this->source->restrictNotices() &&
-            !(new SourceFilter)->includes($this->source, $event->file())) {
+            !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -139,8 +148,20 @@ final class ProgressPrinter
             return;
         }
 
+        if ($this->source->ignoreSelfDeprecations() && $event->trigger()->isSelf()) {
+            return;
+        }
+
+        if ($this->source->ignoreDirectDeprecations() && $event->trigger()->isDirect()) {
+            return;
+        }
+
+        if ($this->source->ignoreIndirectDeprecations() && $event->trigger()->isIndirect()) {
+            return;
+        }
+
         if ($this->source->restrictDeprecations() &&
-            !(new SourceFilter)->includes($this->source, $event->file())) {
+            !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -157,8 +178,20 @@ final class ProgressPrinter
             return;
         }
 
+        if ($this->source->ignoreSelfDeprecations() && $event->trigger()->isSelf()) {
+            return;
+        }
+
+        if ($this->source->ignoreDirectDeprecations() && $event->trigger()->isDirect()) {
+            return;
+        }
+
+        if ($this->source->ignoreIndirectDeprecations() && $event->trigger()->isIndirect()) {
+            return;
+        }
+
         if ($this->source->restrictDeprecations() &&
-            !(new SourceFilter)->includes($this->source, $event->file())) {
+            !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -186,7 +219,7 @@ final class ProgressPrinter
         }
 
         if ($this->source->restrictWarnings() &&
-            !(new SourceFilter)->includes($this->source, $event->file())) {
+            !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -204,7 +237,7 @@ final class ProgressPrinter
         }
 
         if ($this->source->restrictWarnings() &&
-            !(new SourceFilter)->includes($this->source, $event->file())) {
+            !SourceFilter::instance()->includes($event->file())) {
             return;
         }
 
@@ -294,6 +327,7 @@ final class ProgressPrinter
             new TestPreparedSubscriber($this),
             new TestRunnerExecutionStartedSubscriber($this),
             new TestSkippedSubscriber($this),
+            new TestSuiteSkippedSubscriber($this),
             new TestTriggeredDeprecationSubscriber($this),
             new TestTriggeredNoticeSubscriber($this),
             new TestTriggeredPhpDeprecationSubscriber($this),

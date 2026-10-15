@@ -4,6 +4,7 @@
 <head>
 
 
+    <title>E-SKM - Unit Penghubung Kabupaten Paser Juanda, Samarinda</title>
     <meta name="viewport" conteitial-scale="1.0">
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -36,7 +37,8 @@
     </script>
 </head>
 
-<body class="bg-white text-gray-900 h-full relative" style="font-family:  'Roboto'">
+<body class="text-gray-900 h-full relative" style="font-family: 'Roboto'; background-color: #06336b;">
+    @include('partials.paser-bg')
     @include('layouts.sidebar')
     {{-- @include('remake.layouts.resume') --}}
     @yield('content')
