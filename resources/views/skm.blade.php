@@ -4,7 +4,7 @@
 <head>
     <title>E-SKM - Unit Penghubung Kabupaten Paser Juanda, Samarinda</title>
     <meta charset="utf-8">
-    <meta name="viewport" conteitial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
@@ -80,7 +80,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
             <div id=""
                 class="hidden items-center relative isolate  min-w-full h-screen h-screen px-6 sm:px-16 lg:hidden lg:px-24">
 
-                <div class=" hidden text-center   lg:py-32 lg:text-left  w-full justify-between">
+                <div class=" hidden text-center   lg:py-10 lg:my-auto lg:text-left  w-full justify-between">
                     <h1
                         class=" max-w-md  font-bold tracking-tight mb-2 whitespace-nowrap mb-3 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         Jenis pelayanan yang akan anda berikan penilaian
@@ -228,8 +228,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="pertama"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text0-center  lg:flex lg:py-32 lg:text-left  w-full justify-between">
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden overscroll-y-contain touch-pan-y min-w-full h-screen pb-16 lg:pb-0 px-6 sm:px-16 lg:flex lg:px-24"
+                style="-webkit-overflow-scrolling: touch;">
+                <div class=" text0-center  lg:flex lg:py-10 lg:my-auto lg:text-left  w-full justify-between">
                     <div class="gap-4 w-full">
                         <div class="flex justify-between">
                             <h1
@@ -243,7 +244,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         </div>
                         <input type="text" id="nik" name="nik" onkeypress="return hanyaAngka(event)"
                             min="16" max="16" value="{{ old('nik') }}"
-                            class="block w-full p-3 lg:text-xl text-5xl text-[#008DD5] border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
+                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
                         <div class="flex justify-between w-full ">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
@@ -255,7 +256,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             @enderror
                         </div>
                         <input type="text" id="nama" name="nama" value="{{ old('nama') }}"
-                            class="block w-full p-3 lg:text-xl text-5xl text-[#008DD5] border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
+                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
@@ -268,10 +269,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         </div>
                         <input type="text" id="nohp" name="nohp" onkeypress="return hanyaAngka(event)"
                             value="{{ old('nohp') }}"
-                            class="block w-full p-3 lg:text-xl text-5xl text-[#008DD5] border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
-                    </div>
-                    <div class="w-1/6"></div>
-                    <div class="gap-4 w-full">
+                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
@@ -282,16 +280,16 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <div class="{{ $error }}">Harus Diisi</div>
                             @enderror
                         </div>
-                        <ul class="flex grid w-full gap-2 grid-cols-2 mb-6">
+                        <ul class="grid w-full gap-2 grid-cols-2 auto-rows-fr mb-6">
                             <li>
                                 <input type="radio" id="laki" name="jenkel[jenkel]" value="Laki - Laki"
                                     checked
                                     {{ old('jenkel.laki') == 'Laki - Laki' ? 'checked=' . '"' . 'checked' . '"' : '' }}
                                     class="hidden scroll-btn peer">
                                 <label for="laki"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Laki - Laki
+                                        <div class="w-full lg:text-xl  text-3xl  font-semibold">Laki - Laki
                                             ( L )</div>
                                     </div>
                                 </label>
@@ -302,9 +300,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                     {{ old('jenkel.perempuan') == 'Perempuan' ? 'checked=' . '"' . 'checked' . '"' : '' }}
                                     class="hidden scroll-btn peer">
                                 <label for="perempuan"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Perempuan (
+                                        <div class="w-full lg:text-xl  text-3xl  font-semibold">Perempuan (
                                             P )</div>
                                     </div>
                                 </label>
@@ -312,6 +310,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </li>
                         </ul>
+                    </div>
+                    <div class="w-1/6"></div>
+                    <div class="gap-4 w-full">
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
@@ -323,7 +324,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             @enderror
                         </div>
                         <textarea type="text" id="alamat" name="alamat" rows="5"
-                            class="block w-full p-4  lg:text-xl text-5xl text-[#008DD5] border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
+                            class="block w-full p-4 lg:h-24 lg:p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
@@ -335,7 +336,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             @enderror
                         </div>
                         <textarea id="keperluan" name="keperluan" rows="4"
-                            class="block w-full p-4 lg:text-xl text-5xl text-[#008DD5] border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
+                            class="block w-full p-4 lg:h-20 lg:p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
@@ -349,18 +350,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <div class="mb-6">
                             <div id="foto_ktp_preview_wrapper" class="hidden mb-4 rounded-xl border-2 border-dashed border-white bg-white/10 p-3">
                                 <div class="flex flex-col gap-3">
-                                    <img id="foto_ktp_preview" src="" alt="Preview KTP" class="w-full max-h-80 rounded-lg object-contain border border-white bg-white shadow-md">
+                                    <img id="foto_ktp_preview" src="" alt="Preview KTP" class="w-full max-h-48 sm:max-h-80 rounded-lg object-contain border border-white bg-white shadow-md">
                                     <div class="flex items-center justify-between gap-3">
                                         <div class="flex-1 min-w-0">
                                             <p class="text-lg font-semibold text-white truncate" id="foto_ktp_name">Nama file</p>
                                             <p class="text-sm text-white/80">Preview foto KTP</p>
                                         </div>
-                                        <label for="foto_ktp" class="cursor-pointer rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#008DD5] shadow-sm">Ubah</label>
+                                        <label for="foto_ktp" class="cursor-pointer rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black shadow-sm">Ubah</label>
                                     </div>
                                 </div>
                             </div>
                             <input type="file" id="foto_ktp" name="foto_ktp" accept="image/*"
-                                class="block w-full p-3 lg:text-xl text-5xl text-white file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:bg-white file:text-[#008DD5] file:font-semibold border border-2 border-white rounded-lg bg-white/10 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="block w-full p-3 lg:text-xl text-5xl text-white file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:bg-white file:text-black file:font-semibold border border-2 border-white rounded-lg bg-white/10 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="submit" id="btn1"  class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
@@ -377,9 +378,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="kedua"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left   w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left   w-full justify-between">
                     <div class="gap-4 w-full">
                         <div class="flex justify-between">
                             <h1
@@ -391,12 +392,12 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <div class="{{ $error }}">Harus Diisi</div>
                             @enderror
                         </div>
-                        <ul class="grid w-full gap-2 grid-cols-2">
+                        <ul class="grid w-full gap-2 grid-cols-2 auto-rows-fr">
                             <li>
                                 <input type="radio" id="29" name="usia" value="29" checked
                                     class="hidden scroll-btn peer">
                                 <label for="29"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">Kurang dari
                                             30 Tahun
@@ -408,7 +409,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="30" name="usia" value="30"
                                     class="hidden scroll-btn peer">
                                 <label for="30"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">30 s/d 40
                                             Tahun</div>
@@ -419,7 +420,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="41" name="usia" value="41"
                                     class="hidden scroll-btn peer">
                                 <label for="41"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">41 s/d 50
                                             Tahun</div>
@@ -430,7 +431,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="51" name="usia" value="51 "
                                     class="hidden scroll-btn peer">
                                 <label for="51"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">Lebih dari
                                             50 Tahun</div>
@@ -448,12 +449,12 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <div class="{{ $error }}">Pendidikan</div>
                             @enderror
                         </div>
-                        <ul class="grid w-full gap-2 grid-cols-2">
+                        <ul class="grid w-full gap-2 grid-cols-2 auto-rows-fr">
                             <li>
                                 <input type="radio" id="sd" name="pendidikan" value="SD"
                                     class="hidden scroll-btn peer">
                                 <label for="sd"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">SD</div>
                                     </div>
@@ -463,7 +464,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="smp" name="pendidikan" value="SMP"
                                     class="hidden scroll-btn peer">
                                 <label for="smp"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">SMP</div>
                                     </div>
@@ -473,7 +474,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="sma/smk" name="pendidikan" value="SMA / SMK" checked
                                     class="hidden scroll-btn peer">
                                 <label for="sma/smk"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">SMA / SMK
                                         </div>
@@ -484,7 +485,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="d1/d3" name="pendidikan" value="D-I / D-III"
                                     class="hidden scroll-btn peer">
                                 <label for="d1/d3"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">D-I / D-III
                                         </div>
@@ -495,7 +496,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="s1/setara" name="pendidikan" value="S1 / Setara"
                                     class="hidden scroll-btn peer">
                                 <label for="s1/setara"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">S1 / Setara
                                         </div>
@@ -506,7 +507,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="s2/s3" name="pendidikan" value="S2 / S3"
                                     class="hidden scroll-btn peer">
                                 <label for="s2/s3"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
                                         <div class="w-full lg:text-xl  text-5xl  font-semibold">S2 / S3
                                         </div>
@@ -623,9 +624,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="satu"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center w-full justify-between">
                     <h2
                         class="text-left text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         1.
@@ -720,12 +721,12 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="dua"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
-                    radial-gradient(at -5% -5%, #ffffff, transparent 30%),
-                    radial-gradient(at 110% 110%, #ffffff, transparent 30%);">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                    radial-gradient(at -10% -10%, #008DD5, transparent 35%),
+                    radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         2.
@@ -818,9 +819,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="tiga"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         3.
@@ -913,9 +914,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="empat"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         4. Bagaimana pendapat Saudara tentang Kewajaran Biaya/Tarif untuk Mendapatkan Pelayanan ?</h2>
@@ -1008,9 +1009,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="lima"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         5.
@@ -1104,12 +1105,12 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="enam"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
                     radial-gradient(at -10% -10%, #008DD5, transparent 35%),
                     radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         6. Bagaimana pendapat Saudara tentang Kompetensi/Kemampuan Petugas dalam pelayanan ?</h2>
@@ -1201,9 +1202,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="tujuh"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         7.
@@ -1298,12 +1299,12 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="delapan"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
                     radial-gradient(at -10% -10%, #008DD5, transparent 35%),
                     radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         8. Bagaimana pendapat Saudara tentang Kualitas sarana dan prasarana
@@ -1394,9 +1395,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="sembilan"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
-                <div class=" text-center  lg:flex lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         9.
@@ -1495,18 +1496,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="saran"
-                class="lg:pt-0 pt-16 items-center relative isolate overflow-hidden min-w-full h-screen h-screen
+                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
                     radial-gradient(at -10% -10%, #008DD5, transparent 35%),
                     radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
-                <div class=" text-center  lg:py-32 lg:text-left items-center  w-full justify-between">
+                <div class=" text-left  lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2 class=" font-bold tracking-tight text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)] text-6xl lg:text-3xl mb-6">Saran
                         perbaikan, masukan dan harapan :</h2>
                     <textarea type="text" id="saran" name="saran"
-                        class="block w-full p-4 pl-10 text-5xl lg:text-xl text-[#008DD5] border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
+                        class="block w-full p-4 pl-10 text-5xl lg:text-xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
                     <button for="kesesuaian-ad" type="submit"
-                        class="w-full font-bold p-6 lg:p-4 text-5xl lg:text-2xl text-white bg-[#0a3d7a] hover:bg-[#072c5a] border-2 border-white/80 rounded-2xl shadow-xl cursor-pointer">
+                        class="w-full font-bold p-6 lg:p-4 text-5xl lg:text-2xl text-white bg-[#0a3d7a] hover:bg-[#072c5a] border-2 border-white/80 rounded-2xl shadow-xl cursor-pointer mb-4">
                         KIRIM
                     </button>
                     <a type="button" onclick="window.location='#sembilan'"

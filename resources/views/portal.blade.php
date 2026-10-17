@@ -36,7 +36,8 @@
 
                 <div class="text-center space-y-2">
                     <h1 class="text-xl sm:text-2xl font-extrabold leading-tight text-[#008DD5]">
-                        UNIT PENGHUBUNG KABUPATEN PASER<br>JUANDA, SAMARINDA
+                        <span class="inline-block">UNIT PENGHUBUNG</span>
+                        <span class="inline-block">KABUPATEN PASER</span><br>JUANDA, SAMARINDA
                     </h1>
                     <p class="text-sm text-slate-500">JL. Juanda 4 No. 102 Samarinda</p>
                 </div>
