@@ -105,6 +105,14 @@ if ($_GET['tw'] == null) {
             'u8' => 'required',
             'u9' => 'required',
             'saran' => 'required',
+        ], [
+            'nik.digits' => 'NIK harus 16 digit angka.',
+            'foto_ktp.image' => 'Foto KTP harus berupa gambar.',
+            'foto_ktp.mimes' => 'Foto KTP harus berformat JPG atau PNG.',
+            'foto_ktp.max' => 'Ukuran foto KTP maksimal 2 MB.',
+            'foto_ktp.uploaded' => 'Foto KTP gagal diupload, kemungkinan ukurannya terlalu besar.',
+            'saran.required' => 'Saran, masukan dan harapan wajib diisi.',
+            'required' => 'Kolom :attribute wajib diisi.',
         ]);
 
 
@@ -115,37 +123,46 @@ if ($_GET['tw'] == null) {
         // $data->save();
         // return redirect()->back();
 
-        $fotoKtpPath = null;
-        if ($request->hasFile('foto_ktp')) {
-            $fotoKtpPath = $request->file('foto_ktp')->store('ktp', 'public');
+        try {
+            $fotoKtpPath = null;
+            if ($request->hasFile('foto_ktp')) {
+                $fotoKtpPath = $request->file('foto_ktp')->store('ktp', 'public');
+            }
+
+            $store = NilaiUnsur::create([
+                'jenisPelayanan' => $request->jenisPelayanan,
+                'nama' => $request->nama,
+                'alamat' => $request->alamat,
+                'keperluan' => $request->keperluan,
+                'foto_ktp' => $fotoKtpPath,
+                'pekerjaan' => $request->pekerjaan,
+                'jenkel' => $request->jenkel['jenkel'],
+                'usia' => $request->usia,
+                'nohp' => $request->nohp,
+                'pendidikan' => $request->pendidikan,
+                'nik' => $request->filled('nik') ? $request->nik : null, // NIK opsional
+                'u1' => $request->u1,
+                'u2' => $request->u2,
+                'u3' => $request->u3,
+                'u4' => $request->u4,
+                'u5' => $request->u5,
+                'u6' => $request->u6,
+                'u7' => $request->u7,
+                'u8' => $request->u8,
+                'u9' => $request->u9,
+                'saran' => $request->saran,
+            ]);
+        } catch (\Throwable $e) {
+            // catat ke storage/logs/laravel.log, lalu kembalikan responden ke form dengan pesan
+            report($e);
+
+            return redirect('/skm')
+                ->withInput($request->except(['_token', 'foto_ktp']))
+                ->with('error', 'Maaf, survei gagal disimpan karena gangguan pada server. Silakan coba kirim lagi.');
         }
 
-        $store = NilaiUnsur::create([
-            'jenisPelayanan' => $request->jenisPelayanan,
-            'nama' => $request->nama,
-            'alamat' => $request->alamat,
-            'keperluan' => $request->keperluan,
-            'foto_ktp' => $fotoKtpPath,
-            'pekerjaan' => $request->pekerjaan,
-            'jenkel' => $request->jenkel['jenkel'],
-            'usia' => $request->usia,
-            'nohp' => $request->nohp,
-            'pendidikan' => $request->pendidikan,
-            'nik' => $request->filled('nik') ? $request->nik : '-', // NIK opsional
-            'u1' => $request->u1,
-            'u2' => $request->u2,
-            'u3' => $request->u3,
-            'u4' => $request->u4,
-            'u5' => $request->u5,
-            'u6' => $request->u6,
-            'u7' => $request->u7,
-            'u8' => $request->u8,
-            'u9' => $request->u9,
-            'saran' => $request->saran,
-        ]);
-
-        // setelah input, langsung kembali ke halaman utama
-        return redirect('/')->with('success', 'Terima kasih, survei Anda berhasil dikirim.');
+        // setelah berhasil, langsung ke halaman hasil SKM
+        return redirect('/hasil-skm')->with('success', 'Terima kasih, survei Anda berhasil dikirim.');
     }
 
     /**

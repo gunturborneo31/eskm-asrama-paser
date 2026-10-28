@@ -30,7 +30,34 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
     <div class="overflow-x-hidden">
 
-        <div id="popup" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm w-full h-full overflow-y-auto overscroll-contain">
+        @php($pesanError = session('error') ?? (request('gagal') === 'foto-terlalu-besar' ? 'Ukuran foto KTP terlalu besar. Gunakan foto maksimal 2 MB atau kosongkan foto KTP, lalu isi ulang survei.' : null))
+        @php($adaError = $pesanError || $errors->any())
+        @if ($adaError)
+            {{-- responden dikembalikan dari proses kirim: tampilkan alasannya --}}
+            <div id="alert-error"
+                class="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] max-w-xl rounded-2xl bg-white shadow-2xl border-l-8 border-red-600 p-4">
+                <div class="flex items-start gap-3">
+                    <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-600 text-white font-black">!</span>
+                    <div class="flex-1 text-sm sm:text-base text-slate-800">
+                        <p class="font-bold text-red-700 mb-1">Survei belum terkirim</p>
+                        @if ($pesanError)
+                            <p>{{ $pesanError }}</p>
+                        @endif
+                        @if ($errors->any())
+                            <ul class="list-disc pl-5 space-y-0.5">
+                                @foreach ($errors->all() as $pesan)
+                                    <li>{{ $pesan }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
+                    <button type="button" onclick="document.getElementById('alert-error').remove()"
+                        class="text-slate-400 hover:text-slate-600 text-2xl leading-none" aria-label="Tutup">&times;</button>
+                </div>
+            </div>
+        @endif
+
+        <div id="popup" class="{{ $adaError ? 'hidden' : '' }} fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm w-full h-full overflow-y-auto overscroll-contain">
             <div class="flex min-h-full items-center justify-center p-4 sm:p-6" id="modal">
                 <div class="relative w-full max-w-2xl p-3 md:p-5 sm:p-8 lg:p-6 shadow-2xl rounded-3xl bg-white border-t-8 border-[#0a3d7a]">
                     <div class="mt-1 sm:mt-3 text-center">
@@ -1567,8 +1594,67 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
         let fotoKtpName = document.getElementById('foto_ktp_name');
         var bnr = 0;
 
-        fotoKtpInput.addEventListener('change', function(event) {
-            const file = event.target.files && event.target.files[0];
+        // Isi ulang jawaban jika responden dikembalikan ke form (mis. validasi gagal)
+        (function () {
+            const oldInput = @json(session()->getOldInput());
+            const setField = function (name, value) {
+                document.querySelectorAll('[name="' + name + '"]').forEach(function (el) {
+                    if (el.type === 'radio' || el.type === 'checkbox') {
+                        el.checked = String(el.value).trim() === String(value).trim();
+                    } else if (el.type !== 'file') {
+                        el.value = value;
+                    }
+                });
+            };
+            Object.keys(oldInput || {}).forEach(function (key) {
+                const value = oldInput[key];
+                if (value !== null && typeof value === 'object') {
+                    Object.keys(value).forEach(function (sub) { setField(key + '[' + sub + ']', value[sub]); });
+                } else if (value !== null) {
+                    setField(key, value);
+                }
+            });
+        })();
+
+        // Foto dari kamera HP biasanya 3-10 MB. Perkecil di browser (maks. sisi 1600px, JPEG)
+        // supaya di bawah batas 2 MB dan tidak ditolak server.
+        const MAKS_UKURAN = 2 * 1024 * 1024;
+        function kompresFoto(file) {
+            return new Promise(function (resolve) {
+                if (!file.type.startsWith('image/') || typeof DataTransfer === 'undefined') return resolve(file);
+                const url = URL.createObjectURL(file);
+                const img = new Image();
+                img.onload = function () {
+                    URL.revokeObjectURL(url);
+                    const skala = Math.min(1, 1600 / Math.max(img.width, img.height));
+                    const canvas = document.createElement('canvas');
+                    canvas.width = Math.round(img.width * skala);
+                    canvas.height = Math.round(img.height * skala);
+                    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+                    canvas.toBlob(function (blob) {
+                        if (!blob || blob.size >= file.size) return resolve(file);
+                        const nama = file.name.replace(/\.[^.]+$/, '') + '.jpg';
+                        resolve(new File([blob], nama, { type: 'image/jpeg' }));
+                    }, 'image/jpeg', 0.8);
+                };
+                img.onerror = function () { URL.revokeObjectURL(url); resolve(file); };
+                img.src = url;
+            });
+        }
+
+        fotoKtpInput.addEventListener('change', async function(event) {
+            let file = event.target.files && event.target.files[0];
+            if (file && file.size > 500 * 1024 && !file.__dikompres) {
+                const hasil = await kompresFoto(file);
+                if (hasil !== file) {
+                    hasil.__dikompres = true;
+                    const dt = new DataTransfer();
+                    dt.items.add(hasil);
+                    fotoKtpInput.files = dt.files;
+                    file = hasil;
+                }
+            }
+            error_ktp.innerText = file && file.size > MAKS_UKURAN ? 'Ukuran foto maksimal 2 MB' : '';
             if (!file) {
                 fotoKtpPreviewWrapper.classList.add('hidden');
                 fotoKtpPreview.src = '';

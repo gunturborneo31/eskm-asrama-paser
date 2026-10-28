@@ -39,7 +39,7 @@ class DashboardController extends Controller
             // teruskan pesan sukses dari form survei melewati redirect ini
             session()->reflash();
 
-            // tetap di URL yang sama (/nilai-skm atau /remake), hanya tambah parameter
+            // tetap di URL yang sama (/hasil-skm atau /remake), hanya tambah parameter
             return redirect(request()->url()."?tw=".$tw."&Tahun=".date('Y'));
         }
 

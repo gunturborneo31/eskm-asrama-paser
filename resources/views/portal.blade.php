@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="mt-8">
-                    <a href="{{ url('/nilai-skm') }}"
+                    <a href="{{ url('/hasil-skm') }}"
                         class="mb-3 flex items-center justify-center w-full rounded-xl border-2 border-[#008DD5] bg-white hover:bg-sky-50 active:scale-[0.99] transition-all duration-200 text-[#008DD5] font-semibold text-base sm:text-lg py-3.5">
                         Lihat Nilai SKM
                     </a>
