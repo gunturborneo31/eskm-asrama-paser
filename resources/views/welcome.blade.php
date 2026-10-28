@@ -620,7 +620,7 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                             </thead>
                             <tbody class="border">
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         1
@@ -652,7 +652,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         2
@@ -685,7 +685,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         3
@@ -718,7 +718,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         4
@@ -751,7 +751,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         5
@@ -784,7 +784,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         6
@@ -817,7 +817,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         7
@@ -850,7 +850,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         8
@@ -882,7 +882,7 @@ $jmlResponden = DB::table('2024')
                                         ?>
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td
                                         class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         9
@@ -946,7 +946,7 @@ $jmlResponden = DB::table('2024')
                                     </tr>
                                 </thead>
                                 <tbody class="border">
-                                    <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                    <tr class="border-b bg-white  text-xs">
                                         <td
                                             class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             3,532 - 4,000
@@ -966,7 +966,7 @@ $jmlResponden = DB::table('2024')
                                             </label>
                                         </td>
                                     </tr>
-                                    <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                    <tr class="border-b bg-white  text-xs">
                                         <td
                                             class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             3,064 - 3,532
@@ -986,7 +986,7 @@ $jmlResponden = DB::table('2024')
                                             </label>
                                         </td>
                                     </tr>
-                                    <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                    <tr class="border-b bg-white  text-xs">
                                         <td
                                             class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             2,600 - 3,064
@@ -1006,7 +1006,7 @@ $jmlResponden = DB::table('2024')
                                             </label>
                                         </td>
                                     </tr>
-                                    <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                    <tr class="border-b bg-white  text-xs">
                                         <td
                                             class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             1,000 - 2,599
@@ -1026,7 +1026,7 @@ $jmlResponden = DB::table('2024')
                                             </label>
                                         </td>
                                     </tr>
-                                    <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                    <tr class="border-b bg-white  text-xs">
                                         <td
                                             class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             0,000 - 0,999

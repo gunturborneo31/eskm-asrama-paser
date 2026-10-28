@@ -22,7 +22,7 @@
 </head>
 
 <?php
-$error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4 py-2 rounded-lg bg-red-600 text-white font-bold lg:text-lg text-4xl shadow-lg ring-2 ring-white before:content-[\'\26A0\'] scroll-mt-40';
+$error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4 py-2 rounded-lg bg-red-600 text-white font-bold lg:text-lg text-sm md:text-4xl shadow-lg ring-2 ring-white before:content-[\'\26A0\'] scroll-mt-40';
 ?>
 
 <body class="items-center relative" style="background-color: #06336b;">
@@ -32,7 +32,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
         <div id="popup" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm w-full h-full overflow-y-auto overscroll-contain">
             <div class="flex min-h-full items-center justify-center p-4 sm:p-6" id="modal">
-                <div class="relative w-full max-w-2xl p-5 sm:p-8 lg:p-6 shadow-2xl rounded-3xl bg-white border-t-8 border-[#0a3d7a]">
+                <div class="relative w-full max-w-2xl p-3 md:p-5 sm:p-8 lg:p-6 shadow-2xl rounded-3xl bg-white border-t-8 border-[#0a3d7a]">
                     <div class="mt-1 sm:mt-3 text-center">
                         <h3 class="text-xl sm:text-3xl lg:text-2xl leading-tight font-extrabold mb-4 sm:mb-6 text-[#0a3d7a]">
                             SELAMAT
@@ -90,7 +90,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                 <div class=" hidden text-center   lg:py-10 lg:my-auto lg:text-left  w-full justify-between">
                     <h1
-                        class=" max-w-md  font-bold tracking-tight mb-2 whitespace-nowrap mb-3 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                        class=" max-w-md  font-bold tracking-tight mb-2 whitespace-nowrap mb-3 text-white lg:text-2xl  text-lg md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         Jenis pelayanan yang akan anda berikan penilaian
                     </h1>
                     <div class="lg:flex w-full justify-between gap-4">
@@ -99,9 +99,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="pajak_1" name="jenisPelayanan" value="Pajak 1 Tahunan"
                                     checked class="hidden scroll-btn peer">
                                 <label for="pajak_1"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Pajak 1
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Pajak 1
                                             Tahunan</div>
                                     </div>
                                 </label>
@@ -110,9 +110,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="pajak_5" name="jenisPelayanan" value="Pajak 5 Tahunan"
                                     class="hidden scroll-btn peer">
                                 <label for="pajak_5"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Pajak 5
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Pajak 5
                                             Tahunan</div>
                                     </div>
                                 </label>
@@ -121,9 +121,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="e_samsat" name="jenisPelayanan" value="E-SAMSAT"
                                     class="hidden scroll-btn peer">
                                 <label for="e_samsat"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">E-SAMSAT
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">E-SAMSAT
                                         </div>
                                     </div>
                                 </label>
@@ -134,9 +134,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                             Pertama)"
                                     class="hidden scroll-btn peer">
                                 <label for="bbnkb_1"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Proses BBNKB
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Proses BBNKB
                                             I (Daftar
                                             Kendaraan
                                             Pertama)</div>
@@ -147,9 +147,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="bbnkb_2" name="jenisPelayanan"
                                     value="Proses BBNKB II (Balik Nama)" class="hidden scroll-btn peer">
                                 <label for="bbnkb_2"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Proses BBNKB
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Proses BBNKB
                                             II (Balik
                                             Nama)</div>
                                     </div>
@@ -161,9 +161,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="hilang" name="jenisPelayanan"
                                     value="Proses STNK & SKPD Hilang/Rusak" class="hidden scroll-btn peer">
                                 <label for="hilang"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Proses STNK
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Proses STNK
                                             & SKPD
                                             Hilang/Rusak</div>
                                     </div>
@@ -175,9 +175,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                             Nopol"
                                     class="hidden scroll-btn peer">
                                 <label for="rubah_bentuk"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Rubah
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Rubah
                                             Bentuk / Warna /
                                             Mesin / Ganti
                                             Nopol</div>
@@ -188,9 +188,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="mutasi_keluar" name="jenisPelayanan"
                                     value="Proses Mutasi Keluar" class="hidden scroll-btn peer">
                                 <label for="mutasi_keluar"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Proses
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Proses
                                             Mutasi Keluar
                                         </div>
                                     </div>
@@ -200,9 +200,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="mutasi_masuk" name="jenisPelayanan"
                                     value="Proses Mutasi Masuk" class="hidden scroll-btn peer">
                                 <label for="mutasi_masuk"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Proses
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Proses
                                             Mutasi Masuk</div>
                                     </div>
                                 </label>
@@ -211,9 +211,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="loket_khusus" name="jenisPelayanan"
                                     value="Loket Khusus Disabilitas" class="hidden scroll-btn peer">
                                 <label for="loket_khusus"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Loket
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Loket
                                             Khusus Disabilitas
                                         </div>
                                     </div>
@@ -223,10 +223,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                     </div>
                     <li class="flex gap-3 mt-8 w-full">
                         <a type="button" onclick="window.location='#pertama'"
-                             class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                             class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                             <label class="cursor-pointer">LANJUT</label>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-14 h-14 lg:w-7 lg:h-7">
+                                class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                 <path fill-rule="evenodd"
                                     d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                     clip-rule="evenodd" />
@@ -236,14 +236,14 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="pertama"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden overscroll-y-contain touch-pan-y min-w-full h-screen pb-16 lg:pb-0 px-6 sm:px-16 lg:flex lg:px-24"
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden overscroll-y-contain touch-pan-y min-w-full h-screen pb-16 lg:pb-0 px-6 sm:px-16 lg:flex lg:px-24"
                 style="-webkit-overflow-scrolling: touch;">
                 <div class=" text0-center  lg:flex lg:py-10 lg:my-auto lg:text-left  w-full justify-between">
                     <div class="gap-4 w-full">
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                NIK <span class="font-semibold text-amber-200 text-3xl lg:text-lg">(Opsional)</span>
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                NIK <span class="font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Opsional)</span>
                             </h1>
                             <h1 id="errornik" class="{{ $error }}"></h1>
                             @error('nik')
@@ -252,13 +252,13 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         </div>
                         <input type="text" id="nik" name="nik" onkeypress="return hanyaAngka(event)"
                             inputmode="numeric" maxlength="16" value="{{ old('nik') }}"
-                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
-                        <p class="mt-2 mb-6 text-white/90 text-2xl lg:text-base drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
+                            class="block w-full p-3 lg:text-xl text-lg md:text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"></input>
+                        <p class="mt-2 mb-4 md:mb-6 text-white/90 text-sm md:text-2xl lg:text-base drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
                             Boleh dikosongkan. Jika diisi, NIK harus 16 digit angka.
                         </p>
                         <div class="flex justify-between w-full ">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                                 Nama
                             </h1>
                             <h1 id="errornama" class="{{ $error }}"></h1>
@@ -267,10 +267,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             @enderror
                         </div>
                         <input type="text" id="nama" name="nama" value="{{ old('nama') }}"
-                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
+                            class="block w-full p-3 lg:text-xl text-lg md:text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 mb-4 md:mb-6"></input>
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                                 Nomor Telpon HP
                             </h1>
                             <h1 id="errornohp" class="{{ $error }}"></h1>
@@ -280,27 +280,27 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         </div>
                         <input type="text" id="nohp" name="nohp" onkeypress="return hanyaAngka(event)"
                             value="{{ old('nohp') }}"
-                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
+                            class="block w-full p-3 lg:text-xl text-lg md:text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 mb-4 md:mb-6"></input>
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Jenis Kelamin <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                Jenis Kelamin <span class="normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             <h1 id="errorjenkel" class="{{ $error }}"></h1>
                             @error('jenkel')
                                 <div class="{{ $error }}">Harus Diisi</div>
                             @enderror
                         </div>
-                        <ul class="grid w-full gap-2 grid-cols-2 auto-rows-fr mb-6">
+                        <ul class="grid w-full gap-2 grid-cols-2 auto-rows-fr mb-4 md:mb-6">
                             <li>
                                 <input type="radio" id="laki" name="jenkel[jenkel]" value="Laki - Laki"
                                     checked
                                     {{ old('jenkel.laki') == 'Laki - Laki' ? 'checked=' . '"' . 'checked' . '"' : '' }}
                                     class="hidden scroll-btn peer">
                                 <label for="laki"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-3xl  font-semibold">Laki - Laki
+                                        <div class="w-full lg:text-xl  text-base md:text-3xl  font-semibold">Laki - Laki
                                             ( L )</div>
                                     </div>
                                 </label>
@@ -311,9 +311,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                     {{ old('jenkel.perempuan') == 'Perempuan' ? 'checked=' . '"' . 'checked' . '"' : '' }}
                                     class="hidden scroll-btn peer">
                                 <label for="perempuan"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-3xl  font-semibold">Perempuan (
+                                        <div class="w-full lg:text-xl  text-base md:text-3xl  font-semibold">Perempuan (
                                             P )</div>
                                     </div>
                                 </label>
@@ -326,7 +326,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                     <div class="gap-4 w-full">
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                                 Alamat
                             </h1>
                             <h1 id="erroralamat" class="{{ $error }}"></h1>
@@ -335,10 +335,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             @enderror
                         </div>
                         <textarea type="text" id="alamat" name="alamat" rows="5"
-                            class="block w-full p-4 lg:h-24 lg:p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
+                            class="block w-full p-4 lg:h-24 lg:p-3 lg:text-xl text-lg md:text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 mb-4 md:mb-6"></textarea>
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                                 Keperluan
                             </h1>
                             <h1 id="errorkeperluan" class="{{ $error }}"></h1>
@@ -347,21 +347,21 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             @enderror
                         </div>
                         <textarea id="keperluan" name="keperluan" rows="4"
-                            class="block w-full p-4 lg:h-20 lg:p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
+                            class="block w-full p-4 lg:h-20 lg:p-3 lg:text-xl text-lg md:text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 mb-4 md:mb-6"></textarea>
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Upload File Foto KTP <span class="font-semibold text-amber-200 text-3xl lg:text-lg">(Opsional)</span>
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                Upload File Foto KTP <span class="font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Opsional)</span>
                             </h1>
                             <h1 id="errorktp" class="{{ $error }}"></h1>
                             @error('foto_ktp')
                                 <div class="{{ $error }}">File harus gambar JPG/PNG, maks. 2 MB</div>
                             @enderror
                         </div>
-                        <p class="mb-3 text-white/90 text-2xl lg:text-base drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
+                        <p class="mb-3 text-white/90 text-sm md:text-2xl lg:text-base drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
                             Boleh dikosongkan. Jika diupload, gunakan foto JPG/PNG dengan ukuran maksimal 2 MB.
                         </p>
-                        <div class="mb-6">
+                        <div class="mb-4 md:mb-6">
                             <div id="foto_ktp_preview_wrapper" class="hidden mb-4 rounded-xl border-2 border-dashed border-white bg-white/10 p-3">
                                 <div class="flex flex-col gap-3">
                                     {{-- preview dibatasi tingginya dan bisa di-scroll supaya tombol LANJUT tetap terlihat --}}
@@ -378,13 +378,13 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 </div>
                             </div>
                             <input type="file" id="foto_ktp" name="foto_ktp" accept="image/*"
-                                class="block w-full p-3 lg:text-xl text-5xl text-white file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:bg-white file:text-black file:font-semibold border border-2 border-white rounded-lg bg-white/10 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="block w-full p-3 lg:text-xl text-lg md:text-5xl text-white file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:bg-white file:text-black file:font-semibold border border-2 border-white rounded-lg bg-white/10 focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <li class="flex gap-3 mt-8 w-full">
-                            <a type="submit" id="btn1"  class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                            <a type="submit" id="btn1"  class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -395,14 +395,14 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="kedua"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left   w-full justify-between">
                     <div class="gap-4 w-full">
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Usia (Tahun) <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                Usia (Tahun) <span class="normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             <h1 id="errorusia" class="{{ $error }}"></h1>
                             @error('usia')
@@ -414,9 +414,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="29" name="usia" value="29" checked
                                     class="hidden scroll-btn peer">
                                 <label for="29"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Kurang dari
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Kurang dari
                                             30 Tahun
                                         </div>
                                     </div>
@@ -426,9 +426,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="30" name="usia" value="30"
                                     class="hidden scroll-btn peer">
                                 <label for="30"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">30 s/d 40
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">30 s/d 40
                                             Tahun</div>
                                     </div>
                                 </label>
@@ -437,9 +437,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="41" name="usia" value="41"
                                     class="hidden scroll-btn peer">
                                 <label for="41"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">41 s/d 50
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">41 s/d 50
                                             Tahun</div>
                                     </div>
                                 </label>
@@ -448,9 +448,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="51" name="usia" value="51 "
                                     class="hidden scroll-btn peer">
                                 <label for="51"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Lebih dari
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Lebih dari
                                             50 Tahun</div>
                                     </div>
                                 </label>
@@ -458,8 +458,8 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         </ul>
                         <div class="flex justify-between mt-6">
                             <h1
-                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Pendidikan <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
+                                class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                Pendidikan <span class="normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             </h1>
                             @error('pendidikan')
@@ -471,9 +471,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="sd" name="pendidikan" value="SD"
                                     class="hidden scroll-btn peer">
                                 <label for="sd"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">SD</div>
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">SD</div>
                                     </div>
                                 </label>
                             </li>
@@ -481,9 +481,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="smp" name="pendidikan" value="SMP"
                                     class="hidden scroll-btn peer">
                                 <label for="smp"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">SMP</div>
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">SMP</div>
                                     </div>
                                 </label>
                             </li>
@@ -491,9 +491,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="sma/smk" name="pendidikan" value="SMA / SMK" checked
                                     class="hidden scroll-btn peer">
                                 <label for="sma/smk"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">SMA / SMK
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">SMA / SMK
                                         </div>
                                     </div>
                                 </label>
@@ -502,9 +502,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="d1/d3" name="pendidikan" value="D-I / D-III"
                                     class="hidden scroll-btn peer">
                                 <label for="d1/d3"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">D-I / D-III
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">D-I / D-III
                                         </div>
                                     </div>
                                 </label>
@@ -513,9 +513,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="s1/setara" name="pendidikan" value="S1 / Setara"
                                     class="hidden scroll-btn peer">
                                 <label for="s1/setara"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">S1 / Setara
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">S1 / Setara
                                         </div>
                                     </div>
                                 </label>
@@ -524,9 +524,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="s2/s3" name="pendidikan" value="S2 / S3"
                                     class="hidden scroll-btn peer">
                                 <label for="s2/s3"
-                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full h-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">S2 / S3
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">S2 / S3
                                         </div>
                                     </div>
                                 </label>
@@ -539,8 +539,8 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                     <div class="gap-4 w-full lg:mt-0 mt-4">
                         <div class="flex justify-between">
                             <h1
-                                class=" max-w-md capitalize  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                pekerjaan <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
+                                class=" max-w-md capitalize  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-xl md:text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                                pekerjaan <span class="normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             </h1>
                             @error('pekerjaan')
@@ -552,9 +552,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="asn" name="pekerjaan" value="ASN"
                                     class="hidden scroll-btn peer">
                                 <label for="asn"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">ASN</div>
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">ASN</div>
                                     </div>
                                 </label>
                             </li>
@@ -562,9 +562,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="tni/polri" name="pekerjaan" value="TNI / POLRI"
                                     class="hidden scroll-btn peer">
                                 <label for="tni/polri"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">TNI / POLRI
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">TNI / POLRI
                                         </div>
                                     </div>
                                 </label>
@@ -573,9 +573,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="swasta" name="pekerjaan" value="Swasta" checked
                                     class="hidden scroll-btn peer">
                                 <label for="swasta"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Swasta
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Swasta
                                         </div>
                                     </div>
                                 </label>
@@ -584,9 +584,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="pengusaha" name="pekerjaan" value="Pengusaha"
                                     class="hidden scroll-btn peer">
                                 <label for="pengusaha"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Pengusaha
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Pengusaha
                                         </div>
                                     </div>
                                 </label>
@@ -595,9 +595,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="pelajar" name="pekerjaan" value="Pelajar"
                                     class="hidden scroll-btn peer">
                                 <label for="pelajar"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Pelajar
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Pelajar
                                         </div>
                                     </div>
                                 </label>
@@ -606,18 +606,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 <input type="radio" id="lyn" name="pekerjaan" value="Lainnya"
                                     class="hidden scroll-btn peer">
                                 <label for="lyn"
-                                    class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                    class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                     <div class="block">
-                                        <div class="w-full lg:text-xl  text-5xl  font-semibold">Lainnya
+                                        <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Lainnya
                                         </div>
                                     </div>
                                 </label>
                             </li>
                             <li class="flex gap-3 mt-8 w-full">
                                 <a type="button" onclick="window.location='#pertama'"
-                                     class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                     class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="w-14 h-14 lg:w-7 lg:h-7">
+                                        class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                         <path fill-rule="evenodd"
                                             d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                             clip-rule="evenodd" />
@@ -626,10 +626,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                                 </a>
                                 <a type="button" onclick="window.location='#satu'"
-                                     class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                     class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                     <label class="cursor-pointer">LANJUT</label>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="w-14 h-14 lg:w-7 lg:h-7">
+                                        class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                         <path fill-rule="evenodd"
                                             d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                             clip-rule="evenodd" />
@@ -641,14 +641,14 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="satu"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center w-full justify-between">
                     <h2
-                        class="text-left text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                        class="text-left text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         1.
                         Bagaimana pendapat Saudara tentang Kesesuaian Persyaratan pelayanan dengan jenis pelayanannya ?
-                    <span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                    <span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1 scroll-1">
                         <div class="flex justify-between">
@@ -661,9 +661,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-small" name="u1" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-small"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Tidak Sesuai</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Tidak Sesuai</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -671,9 +671,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-big" name="u1" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-big"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Sesuai
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Sesuai
                                     </div>
                                 </div>
                             </label>
@@ -682,9 +682,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-medium" name="u1" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-medium"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Kurang Sesuai
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Kurang Sesuai
                                     </div>
                                 </div>
                             </label>
@@ -693,9 +693,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-aja" name="u1" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-aja"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sesuai</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sesuai</div>
                                 </div>
                             </label>
                         </li>
@@ -703,9 +703,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-ad" name="u1" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="hosting-ad"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Sesuai
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Sesuai
                                     </div>
                                 </div>
                             </label>
@@ -713,9 +713,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <li class="flex gap-3 mt-8 w-full">
 
                             <a type="button" onclick="window.location='#kedua'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -724,10 +724,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#dua'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -738,16 +738,16 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="dua"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
                     radial-gradient(at -10% -10%, #008DD5, transparent 35%),
                     radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         2.
-                        Bagaimana pemahaman Saudara tentang Kemudahan Prosedur Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        Bagaimana pemahaman Saudara tentang Kemudahan Prosedur Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -760,9 +760,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-a" name="u2" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-a"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Tidak Mudah</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Tidak Mudah</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -770,9 +770,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-b" name="u2" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-b"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Mudah
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Mudah
                                     </div>
                                 </div>
                             </label>
@@ -781,9 +781,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-c" name="u2" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-c"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Kurang Mudah
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Kurang Mudah
                                     </div>
                                 </div>
                             </label>
@@ -792,9 +792,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-d" name="u2" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="hosting-d"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Mudah</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Mudah</div>
                                 </div>
                             </label>
                         </li>
@@ -802,18 +802,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="hosting-e" name="u2" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="hosting-e"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Mudah
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Mudah
                                     </div>
                                 </div>
                             </label>
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#satu'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -822,10 +822,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#tiga'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -836,13 +836,13 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="tiga"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         3.
-                        Bagaimana pendapat Saudara tentang Kecepatan Waktu Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        Bagaimana pendapat Saudara tentang Kecepatan Waktu Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -855,9 +855,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="prosedur-small" name="u3" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="prosedur-small"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Tidak Cepat</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Tidak Cepat</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -865,9 +865,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="prosedur-big" name="u3" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="prosedur-big"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Cepat
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Cepat
                                     </div>
                                 </div>
                             </label>
@@ -876,9 +876,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="prosedur-medium" name="u3" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="prosedur-medium"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Kurang Cepat
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Kurang Cepat
                                     </div>
                                 </div>
                             </label>
@@ -887,9 +887,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="prosedur-aja" name="u3" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="prosedur-aja"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Cepat</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Cepat</div>
                                 </div>
                             </label>
                         </li>
@@ -897,18 +897,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="prosedur-ad" name="u3" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="prosedur-ad"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Cepat
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Cepat
                                     </div>
                                 </div>
                             </label>
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#dua'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -917,10 +917,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#empat'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -931,12 +931,12 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="empat"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
-                        4. Bagaimana pendapat Saudara tentang Kewajaran Biaya/Tarif untuk Mendapatkan Pelayanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
+                        4. Bagaimana pendapat Saudara tentang Kewajaran Biaya/Tarif untuk Mendapatkan Pelayanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -949,9 +949,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="perilaku-a" name="u4" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="perilaku-a"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Tidak Wajar
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Tidak Wajar
                                     </div>
                                 </div>
                             </label>
@@ -960,9 +960,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="perilaku-b" name="u4" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="perilaku-b"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Wajar
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Wajar
                                     </div>
                                 </div>
                             </label>
@@ -971,9 +971,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="perilaku-c" name="u4" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="perilaku-c"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Cukup Wajar
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Cukup Wajar
                                     </div>
                                 </div>
                             </label>
@@ -982,9 +982,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="perilaku-d" name="u4" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="perilaku-d"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Wajar</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Wajar</div>
                                 </div>
                             </label>
                         </li>
@@ -992,18 +992,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="perilaku-e" name="u4" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="perilaku-e"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Wajar
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Wajar
                                     </div>
                                 </div>
                             </label>
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#tiga'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -1012,10 +1012,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#lima'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -1026,14 +1026,14 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="lima"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         5.
                         Bagaimana pendapat Saudara tentang Kesesuaian Produk Pelayanan antara yang tercantum dalam
-                        standar pelayanan dengan hasil yang diberikan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        standar pelayanan dengan hasil yang diberikan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1046,9 +1046,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kecepatan-small" name="u5" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="kecepatan-small"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Tidak Sesuai</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Tidak Sesuai</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -1056,9 +1056,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kecepatan-big" name="u5" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="kecepatan-big"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Sesuai
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Sesuai
                                     </div>
                                 </div>
                             </label>
@@ -1067,9 +1067,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kecepatan-medium" name="u5" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="kecepatan-medium"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Kurang Sesuai
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Kurang Sesuai
                                     </div>
                                 </div>
                             </label>
@@ -1078,9 +1078,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kecepatan-aja" name="u5" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="kecepatan-aja"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sesuai</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sesuai</div>
                                 </div>
                             </label>
                         </li>
@@ -1088,18 +1088,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kecepatan-ad" name="u5" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="kecepatan-ad"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Sesuai
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Sesuai
                                     </div>
                                 </div>
                             </label>
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#empat'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -1108,10 +1108,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#enam'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -1122,15 +1122,15 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="enam"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
                     radial-gradient(at -10% -10%, #008DD5, transparent 35%),
                     radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
-                        6. Bagaimana pendapat Saudara tentang Kompetensi/Kemampuan Petugas dalam pelayanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
+                        6. Bagaimana pendapat Saudara tentang Kompetensi/Kemampuan Petugas dalam pelayanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1143,9 +1143,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="sarana-a" name="u6" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="sarana-a"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Tidak Kompeten</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Tidak Kompeten</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -1153,9 +1153,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="sarana-b" name="u6" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="sarana-b"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Kompeten
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Kompeten
                                     </div>
                                 </div>
                             </label>
@@ -1164,9 +1164,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="sarana-c" name="u6" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="sarana-c"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Kurang Kompeten
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Kurang Kompeten
                                     </div>
                                 </div>
                             </label>
@@ -1175,9 +1175,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="sarana-d" name="u6" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="sarana-d"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Kompeten</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Kompeten</div>
                                 </div>
                             </label>
                         </li>
@@ -1185,18 +1185,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="sarana-e" name="u6" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="sarana-e"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Kompeten
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Kompeten
                                     </div>
                                 </div>
                             </label>
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#lima'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -1205,10 +1205,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#tujuh'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -1219,14 +1219,14 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="tujuh"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         7.
                         Bagaimana pemahaman Saudara tentang Perilaku Petugas dalam pelayanan terkait kesopanan dan
-                        keramahan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        keramahan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1239,9 +1239,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="biaya-aja" name="u7" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="biaya-aja"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Tidak Sopan dan Ramah</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Tidak Sopan dan Ramah</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -1249,9 +1249,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="biaya-medium" name="u7" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="biaya-medium"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Sopan dan
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Sopan dan
                                         Ramah</div>
                                 </div>
                             </label>
@@ -1260,9 +1260,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="biaya-big" name="u7" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="biaya-big"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Cukup Sopan dan
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Cukup Sopan dan
                                         Ramah</div>
                                 </div>
                             </label>
@@ -1271,9 +1271,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="biaya-cbig" name="u7" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="biaya-cbig"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sopan dan Ramah
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sopan dan Ramah
                                     </div>
                                 </div>
                             </label>
@@ -1282,18 +1282,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="biaya-small" name="u7" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="biaya-small"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Sopan
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Sopan
                                         dan Ramah</div>
                                 </div>
                             </label>
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#enam'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -1302,10 +1302,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#delapan'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -1316,16 +1316,16 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="delapan"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
                     radial-gradient(at -10% -10%, #008DD5, transparent 35%),
                     radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         8. Bagaimana pendapat Saudara tentang Kualitas sarana dan prasarana
-                        ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1338,9 +1338,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="penanganan-a" name="u8" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="penanganan-a"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Buruk</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Buruk</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -1348,9 +1348,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="penanganan-b" name="u8" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="penanganan-b"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Buruk</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Buruk</div>
                                 </div>
                             </label>
                         </li>
@@ -1358,9 +1358,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="penanganan-c" name="u8" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="penanganan-c"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Cukup</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Cukup</div>
                                 </div>
                             </label>
                         </li>
@@ -1368,9 +1368,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="penanganan-d" name="u8" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="penanganan-d"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Baik</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Baik</div>
                                 </div>
                             </label>
                         </li>
@@ -1378,18 +1378,18 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="penanganan-e" name="u8" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="penanganan-e"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Baik
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Baik
                                     </div>
                                 </div>
                             </label>
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#tujuh'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -1398,10 +1398,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#sembilan'"
-                                 class="flex-1 w-full mt-6 flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full mt-6 flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -1412,13 +1412,13 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="sembilan"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24">
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
-                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+                        class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-5 md:mb-10 text-2xl md:text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         9.
-                        Bagaimana pendapat Saudara tentang Penanganan Pengaduan pengguna layanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
+                        Bagaimana pendapat Saudara tentang Penanganan Pengaduan pengguna layanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-base md:text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1431,9 +1431,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kesesuaian-small" name="u9" value="0"
                                 class="hidden scroll-btn peer">
                             <label for="kesesuaian-small"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Tidak Ada</div>
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Tidak Ada</div>
                                 </div>
                             </label>
                         </li> --}}
@@ -1441,9 +1441,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kesesuaian-big" name="u9" value="1"
                                 class="hidden scroll-btn peer">
                             <label for="kesesuaian-big"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Ada Tetapi
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Ada Tetapi
                                         Tidak Berfungsi
                                     </div>
                                 </div>
@@ -1453,9 +1453,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kesesuaian-medium" name="u9" value="2"
                                 class="hidden scroll-btn peer">
                             <label for="kesesuaian-medium"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  text-left font-semibold">
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  text-left font-semibold">
                                         Berfungsi
                                         Kurang Maksimal,
                                         Lambat
@@ -1467,9 +1467,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kesesuaian-aja" name="u9" value="3"
                                 class="hidden scroll-btn peer">
                             <label for="kesesuaian-aja"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Dikelola Dengan
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Dikelola Dengan
                                         Baik</div>
                                 </div>
                             </label>
@@ -1478,9 +1478,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             <input type="radio" id="kesesuaian-ad" name="u9" value="4" checked
                                 class="hidden scroll-btn peer">
                             <label for="kesesuaian-ad"
-                                class="inline-flex items-center justify-between gap-4 w-full p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
+                                class="inline-flex items-center justify-between gap-4 w-full p-3 md:p-5 lg:p-4 bg-white text-slate-800 border-2 border-white rounded-xl cursor-pointer shadow-md transition-colors duration-150 hover:bg-sky-100 peer-checked:bg-[#0a3d7a] peer-checked:text-white peer-checked:ring-4 peer-checked:ring-white/70 peer-checked:shadow-xl after:font-black after:text-xl md:after:text-6xl lg:after:text-2xl peer-checked:after:content-['\2713']">
                                 <div class="block">
-                                    <div class="w-full lg:text-xl  text-5xl  font-semibold">Sangat Dikelola
+                                    <div class="w-full lg:text-xl  text-lg md:text-5xl  font-semibold">Sangat Dikelola
                                         dan Cepat
                                         Ditindaklanjuti</div>
                                 </div>
@@ -1488,9 +1488,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         </li>
                         <li class="flex gap-3 mt-8 w-full">
                             <a type="button" onclick="window.location='#delapan'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                         clip-rule="evenodd" />
@@ -1499,10 +1499,10 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
                             </a>
                             <a type="button" onclick="window.location='#saran'"
-                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
+                                 class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-[#0a3d7a] hover:bg-[#072c5a] text-white border-white/80">
                                 <label class="cursor-pointer">LANJUT</label>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-14 h-14 lg:w-7 lg:h-7">
+                                    class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                                     <path fill-rule="evenodd"
                                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                         clip-rule="evenodd" />
@@ -1513,24 +1513,24 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 </div>
             </div>
             <div id="saran"
-                class="lg:pt-0 pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
+                class="lg:pt-0 pt-8 md:pt-16 relative isolate overflow-y-auto overflow-x-hidden min-w-full h-screen pb-16 lg:pb-0
                 px-6 sm:px-16 lg:flex lg:px-24"
                 style="background-image:
                     radial-gradient(at -10% -10%, #008DD5, transparent 35%),
                     radial-gradient(at 110% 110%, #008DD5, transparent 35%);">
                 <div class=" text-left  lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
-                    <h2 class=" font-bold tracking-tight text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)] text-6xl lg:text-3xl mb-6">Saran
+                    <h2 class=" font-bold tracking-tight text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)] text-2xl md:text-6xl lg:text-3xl mb-4 md:mb-6">Saran
                         perbaikan, masukan dan harapan :</h2>
                     <textarea type="text" id="saran" name="saran"
-                        class="block w-full p-4 pl-10 text-5xl lg:text-xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></textarea>
+                        class="block w-full p-4 pl-10 text-lg md:text-5xl lg:text-xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 mb-4 md:mb-6"></textarea>
                     <button for="kesesuaian-ad" type="submit"
-                        class="w-full font-bold p-6 lg:p-4 text-5xl lg:text-2xl text-white bg-[#0a3d7a] hover:bg-[#072c5a] border-2 border-white/80 rounded-2xl shadow-xl cursor-pointer mb-4">
+                        class="w-full font-bold p-3 md:p-6 lg:p-4 text-lg md:text-5xl lg:text-2xl text-white bg-[#0a3d7a] hover:bg-[#072c5a] border-2 border-white/80 rounded-2xl shadow-xl cursor-pointer mb-4">
                         KIRIM
                     </button>
                     <a type="button" onclick="window.location='#sembilan'"
-                         class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
+                         class="flex-1 w-full flex items-center justify-center gap-3 cursor-pointer select-none rounded-2xl border-2 py-3 md:py-6 lg:py-3 shadow-xl transition-colors duration-150 lg:text-xl text-lg md:text-5xl font-bold bg-white hover:bg-sky-100 text-[#0a3d7a] border-white">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-14 h-14 lg:w-7 lg:h-7">
+                            class="w-6 md:w-14 h-6 md:h-14 lg:w-7 lg:h-7">
                             <path fill-rule="evenodd"
                                 d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
                                 clip-rule="evenodd" />

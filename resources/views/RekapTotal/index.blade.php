@@ -205,12 +205,12 @@ if ($n == 0) {
                             </button>
 
                             <div id="dropdown"
-                                class="z-10 hidden border bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                class="z-10 hidden border bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <ul class="py-2 text-sm text-gray-700"
                                     aria-labelledby="dropdownDefaultButton">
                                     <li>
                                         <a href="/rekapTotal?jenkel={{ $_GET['jenkel'] == 0 ? 1 : 0 }}&usia={{ $_GET['usia'] }}&pekerjaan={{ $_GET['pekerjaan'] }}&pendidikan={{ $_GET['pendidikan'] }}&tahun={{ $_GET['tahun'] }}"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white flex items-center gap-2">
+                                            class="block px-4 py-2 hover:bg-gray-100 flex items-center gap-2">
                                             <p>Jenis kelamin</p>
                                             <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="4"
                                                 stroke="currentColor" viewBox="0 0 24 24" class="w-3 h-3 "
@@ -223,7 +223,7 @@ if ($n == 0) {
                                     </li>
                                     <li>
                                         <a href="/rekapTotal?jenkel={{ $_GET['jenkel'] }}&usia={{ $_GET['usia'] == 0 ? 1 : 0 }}&pekerjaan={{ $_GET['pekerjaan'] }}&pendidikan={{ $_GET['pendidikan'] }}&tahun={{ $_GET['tahun'] }}"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white flex items-center gap-2">
+                                            class="block px-4 py-2 hover:bg-gray-100 flex items-center gap-2">
                                             <p>Usia</p>
                                             <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="4"
                                                 stroke="currentColor" viewBox="0 0 24 24" class="w-3 h-3 "
@@ -236,7 +236,7 @@ if ($n == 0) {
                                     </li>
                                     <li>
                                         <a href="/rekapTotal?jenkel={{ $_GET['jenkel'] }}&usia={{ $_GET['usia'] }}&pekerjaan={{ $_GET['pekerjaan'] == 0 ? 1 : 0 }}&pendidikan={{ $_GET['pendidikan'] }}&tahun={{ $_GET['tahun'] }}"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white flex items-center gap-2">
+                                            class="block px-4 py-2 hover:bg-gray-100 flex items-center gap-2">
                                             <p>Pekerjaan</p>
                                             <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="4"
                                                 stroke="currentColor" viewBox="0 0 24 24" class="w-3 h-3 "
@@ -249,7 +249,7 @@ if ($n == 0) {
                                     </li>
                                     <li>
                                         <a href="/rekapTotal?jenkel={{ $_GET['jenkel'] }}&usia={{ $_GET['usia'] }}&pekerjaan={{ $_GET['pekerjaan'] }}&pendidikan={{ $_GET['pendidikan'] == 0 ? 1 : 0 }}"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white flex items-center gap-2">
+                                            class="block px-4 py-2 hover:bg-gray-100 flex items-center gap-2">
                                             <p>Pendidikan</p>
                                             <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="4"
                                                 stroke="currentColor" viewBox="0 0 24 24" class="w-3 h-3 "

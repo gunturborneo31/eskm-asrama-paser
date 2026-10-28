@@ -359,7 +359,7 @@ $pekerjaan_6 = DB::table('2024')
                                             </tr>
                                         </thead>
                                         <tbody class="border ">
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     1
                                                 </td>
@@ -370,7 +370,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $jenkel_l }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     2
                                                 </td>
@@ -400,7 +400,7 @@ $pekerjaan_6 = DB::table('2024')
                                             </tr>
                                         </thead>
                                         <tbody class="border ">
-                                            <tr class="border-b dark:border-neutral-500 bg-white  bg-text-xs">
+                                            <tr class="border-b bg-white  bg-text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     1
                                                 </td>
@@ -411,7 +411,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $umur_1 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     2
                                                 </td>
@@ -422,7 +422,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $umur_2 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     3
                                                 </td>
@@ -433,7 +433,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $umur_3 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     4
                                                 </td>
@@ -463,7 +463,7 @@ $pekerjaan_6 = DB::table('2024')
                                             </tr>
                                         </thead>
                                         <tbody class="border ">
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     1
                                                 </td>
@@ -474,7 +474,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pendidikan_1 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     2
                                                 </td>
@@ -485,7 +485,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pendidikan_2 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     3
                                                 </td>
@@ -496,7 +496,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pendidikan_3 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     4
                                                 </td>
@@ -507,7 +507,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pendidikan_4 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     5
                                                 </td>
@@ -518,7 +518,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pendidikan_5 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     6
                                                 </td>
@@ -548,7 +548,7 @@ $pekerjaan_6 = DB::table('2024')
                                             </tr>
                                         </thead>
                                         <tbody class="border ">
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     1
                                                 </td>
@@ -559,7 +559,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pekerjaan_1 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     2
                                                 </td>
@@ -570,7 +570,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pekerjaan_2 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     3
                                                 </td>
@@ -581,7 +581,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pekerjaan_3 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     4
                                                 </td>
@@ -592,7 +592,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pekerjaan_4 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     5
                                                 </td>
@@ -603,7 +603,7 @@ $pekerjaan_6 = DB::table('2024')
                                                     {{ $pekerjaan_5 }}
                                                 </td>
                                             </tr>
-                                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                            <tr class="border-b bg-white  text-xs">
                                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                                     6
                                                 </td>

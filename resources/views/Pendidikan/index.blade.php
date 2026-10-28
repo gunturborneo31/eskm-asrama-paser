@@ -275,16 +275,16 @@
                                                     class="px-6 py-3 whitespace-nowrap text-sm text-center font-medium text-gray-800">
                                                     {{ $row++ }}</td>
                                                 <td
-                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800 dark:text-gray-200">
+                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800">
                                                     {{ $data->nik }}</td>
                                                 <td
-                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800 dark:text-gray-200">
+                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800">
                                                     {{ $data->nama }}</td>
                                                 <td
-                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800 dark:text-gray-200">
+                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800">
                                                     {{ $data->pendidikan }}</td>
                                                 <td
-                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800 dark:text-gray-200">
+                                                    class="px-6 py-3 whitespace-nowrap text-sm text-center text-gray-800">
                                                     {{ substr($data->created_at, 0, 10) }}</td>
                                             </tr>
 

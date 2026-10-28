@@ -372,7 +372,7 @@ if ($n == 0) {
                     <div id="konversi" style="display : none;">
                         <table class=" w-full border">
                             <thead
-                                class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+                                class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white">
                                 <tr>
 
                                     <th scope="col" class=" px-4 py-2">Nilai Persepsi</th>
@@ -383,7 +383,7 @@ if ($n == 0) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                         1
                                     </td>
@@ -400,7 +400,7 @@ if ($n == 0) {
                                         Sangat Tidak Memuaskan
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                         2
                                     </td>
@@ -416,7 +416,7 @@ if ($n == 0) {
                                         Tidak Memuaskan
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                         3
                                     </td>
@@ -432,7 +432,7 @@ if ($n == 0) {
                                         Kurang Memuaskan
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                         4
                                     </td>
@@ -448,7 +448,7 @@ if ($n == 0) {
                                         Memuaskan
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                         5
                                     </td>
@@ -483,7 +483,7 @@ if ($n == 0) {
                     <div id="rumus" style="display : none;">
                         <table class=" w-full border">
                             <thead
-                                class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+                                class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white">
                                 <tr>
 
                                     <th scope="col" class=" px-4 py-2">Nilai</th>
@@ -491,7 +491,7 @@ if ($n == 0) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap  w-[100px] text-left px-4 py-1 font-normal text-xs">
                                         Nilai Rata - Rata Per-unsur
                                     </td>
@@ -499,14 +499,14 @@ if ($n == 0) {
                                         : Jumlah nilai per-unsur / Jumlah responden
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-left px-4 py-1 font-normal text-xs">
                                         Nilai Tertimbang
                                     </td>
                                     <td class="whitespace-nowrap text-left px-4 font-normal text-xs">
                                         : Nilai rata - rata per-unsur x Nilai penimbang </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-left px-4 py-1 font-normal text-xs">
                                         Nilai Penimbang
                                     </td>
@@ -514,7 +514,7 @@ if ($n == 0) {
                                         : 1/9 = 0,111111
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-left px-4 py-1 font-normal text-xs">
                                         Nilai Indeks
                                     </td>
@@ -522,7 +522,7 @@ if ($n == 0) {
                                         : Jumlah nilai rata - rata tertimbang per-unsur
                                     </td>
                                 </tr>
-                                <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                                <tr class="border-b bg-white  text-xs">
                                     <td class="whitespace-nowrap text-left px-4 py-1 font-normal text-xs">
                                         Nilai SKM
                                     </td>
@@ -542,7 +542,7 @@ if ($n == 0) {
                     </div>
                     <table class=" w-full border">
                         <thead
-                            class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+                            class="border-b bg-gradient-to-br from-[#008DD5] to-[#008DD5] font-medium text-white">
                             <tr class="">
                                 <th scope="col" class=" px-4 py-2">No</th>
                                 <th scope="col" class=" px-4 py-2">Unsur Pelayanan</th>
@@ -552,7 +552,7 @@ if ($n == 0) {
                             </tr>
                         </thead>
                         <tbody class="border">
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     1
                                 </td>
@@ -582,7 +582,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     2
                                 </td>
@@ -612,7 +612,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     3
                                 </td>
@@ -642,7 +642,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     4
                                 </td>
@@ -672,7 +672,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     5
                                 </td>
@@ -702,7 +702,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     6
                                 </td>
@@ -732,7 +732,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     7
                                 </td>
@@ -762,7 +762,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     8
                                 </td>
@@ -792,7 +792,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td class="whitespace-nowrap text-center px-4 py-1 font-normal text-xs">
                                     9
                                 </td>
@@ -822,7 +822,7 @@ if ($n == 0) {
                                 </td>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td colspan="2" class="whitespace-nowrap text-left px-4 py-1 font-normal text-xs">
                                     Nilai Indeks (NI)
                                 </td>
@@ -848,7 +848,7 @@ if ($n == 0) {
                                     ?>
                                 </td>
                             </tr>
-                            <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
+                            <tr class="border-b bg-white  text-xs">
                                 <td colspan="2" class="whitespace-nowrap text-left px-4 py-1 font-normal text-xs">
                                     Nilai SKM setelah dikonversi (NI x 25)
                                 </td>
