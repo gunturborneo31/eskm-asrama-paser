@@ -15,15 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class, 'welcome']);
+// halaman awal = portal, halaman nilai SKM ada di /nilai-skm
+Route::get('/', function () {
+    return view('portal');
+});
+Route::get('/nilai-skm', [DashboardController::class, 'welcome']);
+Route::redirect('/portal', '/nilai-skm'); // alamat lama tetap berfungsi
 Route::get('/remake', [DashboardController::class, 'welcome']);
 
 Route::get('/login', function () {
     return view('login');
-});
-
-Route::get('/portal', function () {
-    return view('portal');
 });
 
 Route::get('/skm', function () {

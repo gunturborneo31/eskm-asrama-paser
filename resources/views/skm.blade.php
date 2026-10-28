@@ -11,6 +11,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* di HP, 100vh lebih tinggi dari layar yang terlihat (tertutup address bar),
+           sehingga bagian bawah tiap halaman (tombol LANJUT) bisa tersembunyi */
+        body .h-screen {
+            height: 100vh;
+            height: 100dvh;
+        }
+    </style>
 </head>
 
 <?php
@@ -22,19 +30,19 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
 
     <div class="overflow-x-hidden">
 
-        <div id="popup" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm w-full flex items-center h-full">
-            <div class="fixed z-30 bg-opacity-50 overflow-y-auto w-full" id="modal">
-                <div class="relative mx-auto p-8 lg:p-6 lg:w-1/2 w-11/12 shadow-2xl rounded-3xl bg-white border-t-[12px] lg:border-t-8 border-[#0a3d7a]">
-                    <div class="mt-3 text-center">
-                        <h3 class="lg:text-2xl text-5xl leading-tight font-extrabold mb-6 text-[#0a3d7a]">
+        <div id="popup" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm w-full h-full overflow-y-auto overscroll-contain">
+            <div class="flex min-h-full items-center justify-center p-4 sm:p-6" id="modal">
+                <div class="relative w-full max-w-2xl p-5 sm:p-8 lg:p-6 shadow-2xl rounded-3xl bg-white border-t-8 border-[#0a3d7a]">
+                    <div class="mt-1 sm:mt-3 text-center">
+                        <h3 class="text-xl sm:text-3xl lg:text-2xl leading-tight font-extrabold mb-4 sm:mb-6 text-[#0a3d7a]">
                             SELAMAT
                             DATANG DI
                             SURVEY KEPUASAN
                             MASYARAKAT
                         </h3>
-                        <label class="inline-block px-6 py-2 rounded-full bg-amber-100 text-amber-800 font-black lg:text-lg text-5xl">⚠ PERHATIAN</label>
-                        <div class="px-7 items-start mt-4 text-left justify-start">
-                            <table class="border-separate border-spacing-y-4 lg:text-lg text-5xl text-slate-800 leading-snug">
+                        <label class="inline-block px-4 sm:px-6 py-1.5 sm:py-2 rounded-full bg-amber-100 text-amber-800 font-black text-sm sm:text-lg">⚠ PERHATIAN</label>
+                        <div class="px-0 sm:px-7 items-start mt-3 sm:mt-4 text-left justify-start">
+                            <table class="border-separate border-spacing-y-3 sm:border-spacing-y-4 text-sm sm:text-lg text-slate-800 leading-snug">
                                 <tr>
                                     <td class="items-start flex pr-3 font-bold text-[#0a3d7a]">1.</td>
                                     <td class="text-left">Tujuan survei ini adalah untuk memperoleh gambaran secara
@@ -64,9 +72,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                                 </tr>
                             </table>
                         </div>
-                        <div class="items-center px-4 py-3">
+                        <div class="items-center px-0 sm:px-4 py-3">
                             <button onclick="closePopup()" id="ok-btn"
-                                class="px-4 py-6 lg:py-3 bg-[#0a3d7a] hover:bg-[#072c5a] text-white lg:text-xl text-5xl font-bold rounded-2xl w-full shadow-xl focus:outline-none focus:ring-4 focus:ring-sky-300">OK, SAYA MENGERTI</button>
+                                class="px-4 py-3 sm:py-4 lg:py-3 bg-[#0a3d7a] hover:bg-[#072c5a] text-white text-base sm:text-xl font-bold rounded-2xl w-full shadow-xl focus:outline-none focus:ring-4 focus:ring-sky-300">OK, SAYA MENGERTI</button>
                         </div>
                     </div>
 
@@ -235,7 +243,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                NIK
+                                NIK <span class="font-semibold text-amber-200 text-3xl lg:text-lg">(Opsional)</span>
                             </h1>
                             <h1 id="errornik" class="{{ $error }}"></h1>
                             @error('nik')
@@ -243,8 +251,11 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                             @enderror
                         </div>
                         <input type="text" id="nik" name="nik" onkeypress="return hanyaAngka(event)"
-                            min="16" max="16" value="{{ old('nik') }}"
-                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"></input>
+                            inputmode="numeric" maxlength="16" value="{{ old('nik') }}"
+                            class="block w-full p-3 lg:text-xl text-5xl text-black border border-2 border-white rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
+                        <p class="mt-2 mb-6 text-white/90 text-2xl lg:text-base drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
+                            Boleh dikosongkan. Jika diisi, NIK harus 16 digit angka.
+                        </p>
                         <div class="flex justify-between w-full ">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
@@ -273,7 +284,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Jenis Kelamin
+                                Jenis Kelamin <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             <h1 id="errorjenkel" class="{{ $error }}"></h1>
                             @error('jenkel')
@@ -340,17 +351,23 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Upload File Foto KTP
+                                Upload File Foto KTP <span class="font-semibold text-amber-200 text-3xl lg:text-lg">(Opsional)</span>
                             </h1>
                             <h1 id="errorktp" class="{{ $error }}"></h1>
                             @error('foto_ktp')
-                                <div class="{{ $error }}">Harus Diisi</div>
+                                <div class="{{ $error }}">File harus gambar JPG/PNG, maks. 2 MB</div>
                             @enderror
                         </div>
+                        <p class="mb-3 text-white/90 text-2xl lg:text-base drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
+                            Boleh dikosongkan. Jika diupload, gunakan foto JPG/PNG dengan ukuran maksimal 2 MB.
+                        </p>
                         <div class="mb-6">
                             <div id="foto_ktp_preview_wrapper" class="hidden mb-4 rounded-xl border-2 border-dashed border-white bg-white/10 p-3">
                                 <div class="flex flex-col gap-3">
-                                    <img id="foto_ktp_preview" src="" alt="Preview KTP" class="w-full max-h-48 sm:max-h-80 rounded-lg object-contain border border-white bg-white shadow-md">
+                                    {{-- preview dibatasi tingginya dan bisa di-scroll supaya tombol LANJUT tetap terlihat --}}
+                                    <div class="max-h-60 lg:max-h-48 overflow-y-auto overscroll-contain rounded-lg border border-white bg-white shadow-md">
+                                        <img id="foto_ktp_preview" src="" alt="Preview KTP" class="block w-full h-auto">
+                                    </div>
                                     <div class="flex items-center justify-between gap-3">
                                         <div class="flex-1 min-w-0">
                                             <p class="text-lg font-semibold text-white truncate" id="foto_ktp_name">Nama file</p>
@@ -385,7 +402,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Usia (Tahun)
+                                Usia (Tahun) <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             <h1 id="errorusia" class="{{ $error }}"></h1>
                             @error('usia')
@@ -442,7 +459,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <div class="flex justify-between mt-6">
                             <h1
                                 class=" max-w-md  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                Pendidikan
+                                Pendidikan <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             </h1>
                             @error('pendidikan')
@@ -523,7 +540,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         <div class="flex justify-between">
                             <h1
                                 class=" max-w-md capitalize  font-bold tracking-tight mb-2 text-white lg:text-2xl  text-5xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
-                                pekerjaan
+                                pekerjaan <span class="normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span>
                             </h1>
                             </h1>
                             @error('pekerjaan')
@@ -631,7 +648,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         class="text-left text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         1.
                         Bagaimana pendapat Saudara tentang Kesesuaian Persyaratan pelayanan dengan jenis pelayanannya ?
-                    </h2>
+                    <span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1 scroll-1">
                         <div class="flex justify-between">
@@ -730,7 +747,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         2.
-                        Bagaimana pemahaman Saudara tentang Kemudahan Prosedur Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?</h2>
+                        Bagaimana pemahaman Saudara tentang Kemudahan Prosedur Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -825,7 +842,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         3.
-                        Bagaimana pendapat Saudara tentang Kecepatan Waktu Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?</h2>
+                        Bagaimana pendapat Saudara tentang Kecepatan Waktu Pelayanan di Unit Penghubung Kabupaten Paser Juanda, Samarinda ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -919,7 +936,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
-                        4. Bagaimana pendapat Saudara tentang Kewajaran Biaya/Tarif untuk Mendapatkan Pelayanan ?</h2>
+                        4. Bagaimana pendapat Saudara tentang Kewajaran Biaya/Tarif untuk Mendapatkan Pelayanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1016,7 +1033,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         5.
                         Bagaimana pendapat Saudara tentang Kesesuaian Produk Pelayanan antara yang tercantum dalam
-                        standar pelayanan dengan hasil yang diberikan ?</h2>
+                        standar pelayanan dengan hasil yang diberikan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1113,7 +1130,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 <div class=" text-center  lg:flex lg:py-10 lg:my-auto lg:text-left items-center  w-full justify-between">
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
-                        6. Bagaimana pendapat Saudara tentang Kompetensi/Kemampuan Petugas dalam pelayanan ?</h2>
+                        6. Bagaimana pendapat Saudara tentang Kompetensi/Kemampuan Petugas dalam pelayanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1209,7 +1226,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         7.
                         Bagaimana pemahaman Saudara tentang Perilaku Petugas dalam pelayanan terkait kesopanan dan
-                        keramahan ?</h2>
+                        keramahan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1308,7 +1325,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_7px_7px_rgba(0,0,0,0.5)]">
                         8. Bagaimana pendapat Saudara tentang Kualitas sarana dan prasarana
-                        ?</h2>
+                        ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1401,7 +1418,7 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                     <h2
                         class=" text-left lg:max-w-md  font-bold tracking-tight text-white mb-10 text-6xl lg:text-3xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
                         9.
-                        Bagaimana pendapat Saudara tentang Penanganan Pengaduan pengguna layanan ?</h2>
+                        Bagaimana pendapat Saudara tentang Penanganan Pengaduan pengguna layanan ?<span class="block mt-3 normal-case font-semibold text-amber-200 text-3xl lg:text-lg">(Pilih salah satu)</span></h2>
                     <div class="w-1/6"></div>
                     <ul class="grid w-full gap-2 md:grid-cols-1">
                         <div class="flex justify-between">
@@ -1564,6 +1581,8 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 fotoKtpPreview.src = e.target.result;
                 fotoKtpPreviewWrapper.classList.remove('hidden');
                 fotoKtpName.textContent = file.name;
+                // pastikan tombol LANJUT tetap terlihat setelah preview muncul
+                btn1.scrollIntoView({ behavior: 'smooth', block: 'end' });
             };
             reader.readAsDataURL(file);
         });
@@ -1584,10 +1603,11 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
             error_keperluan.innerText = '';
             error_ktp.innerText = '';
 
-            if (nik.length == 0) {
-                error_nik.innerText = 'NIK tidak boleh kosong';
+            // NIK opsional: hanya dicek jika diisi
+            if (nik.length > 0 && nik.length != 16) {
+                error_nik.innerText = 'NIK harus 16 digit';
             } else {
-                nik.length != 16 ? error_nik.innerText = 'NIK harus 16 digit' : validate += 1;
+                validate += 1;
             }
 
             if (nama.length == 0) {
@@ -1614,8 +1634,9 @@ $error = 'empty:hidden inline-flex items-center gap-2 w-fit max-w-full mb-2 px-4
                 validate += 1;
             }
 
-            if (fotoKtp === 0) {
-                error_ktp.innerText = 'Foto KTP wajib diupload';
+            // Foto KTP opsional: hanya dicek ukurannya jika ada file
+            if (fotoKtp > 0 && document.getElementById('foto_ktp').files[0].size > 2 * 1024 * 1024) {
+                error_ktp.innerText = 'Ukuran foto maksimal 2 MB';
             } else {
                 validate += 1;
             }

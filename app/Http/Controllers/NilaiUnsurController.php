@@ -86,14 +86,14 @@ if ($_GET['tw'] == null) {
         // return $request->jenkel['jenkel'];
 
         $this->validate($request, [
-            'nik' => 'required|string|min:16|max:16',
+            'nik' => 'nullable|digits:16',
             'nama' => 'required',
             'jenisPelayanan' => 'required',
             'nohp' => 'required',
             'keperluan' => 'required',
             'jenkel' => 'required',
             'alamat' => 'required',
-            'foto_ktp' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'foto_ktp' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'usia' => 'required',
             'u1' => 'required',
             'u2' => 'required',
@@ -131,7 +131,7 @@ if ($_GET['tw'] == null) {
             'usia' => $request->usia,
             'nohp' => $request->nohp,
             'pendidikan' => $request->pendidikan,
-            'nik' => $request->nik,
+            'nik' => $request->filled('nik') ? $request->nik : '-', // NIK opsional
             'u1' => $request->u1,
             'u2' => $request->u2,
             'u3' => $request->u3,
@@ -144,13 +144,8 @@ if ($_GET['tw'] == null) {
             'saran' => $request->saran,
         ]);
 
-        if ($store) {
-            //redirect dengan pesan sukses
-            return redirect('/terimakasih');
-        } else {
-        // //     //redirect dengan pesan error
-            return redirect('/terimakasih');
-        }
+        // setelah input, langsung kembali ke halaman utama
+        return redirect('/')->with('success', 'Terima kasih, survei Anda berhasil dikirim.');
     }
 
     /**

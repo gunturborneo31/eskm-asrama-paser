@@ -283,7 +283,7 @@ $jmlResponden = DB::table('2024')
 <head>
     <title>E-SKM - Unit Penghubung Kabupaten Paser Juanda, Samarinda</title>
     <meta charset="utf-8">
-    <meta name="viewport" conteitial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -294,15 +294,16 @@ $jmlResponden = DB::table('2024')
 
 <body class="items-center w-full grid grid-cols-1 relative" style="background-color: #06336b;">
     @include('partials.paser-bg')
-    <div class="min-h-screen lg:h-screen lg:overflow-hidden px-8 pb-8 lg:pb-5 lg:px-10 xl:px-16 lg:py-5 flex flex-col w-full">
+    @include('partials.toast-success')
+    <div class="min-h-screen lg:h-screen lg:overflow-hidden px-4 sm:px-6 pb-6 lg:pb-5 lg:px-10 xl:px-16 lg:py-5 flex flex-col w-full">
         <div class="flex justify-between py-[16px] lg:py-0 items-center">
             <div class="flex items-center gap-3 justify-between w-full lg:justify-normal">
                 <div class="flex gap-2">
-                    <img src="/assets/logo_paser.png" class="h-[70px] lg:h-[48px] w-auto object-contain p-1 rounded-xl bg-white"
+                    <img src="/assets/logo_paser.png" class="h-[52px] sm:h-[60px] lg:h-[48px] w-auto object-contain p-1 rounded-xl bg-white"
                         alt="Logo Paser">
                 </div>
                 <div
-                    class="rounded-full lg:whitespace-nowrap text-4xl lg:text-2xl font-bold text-white lg:text-left text-right drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
+                    class="rounded-full lg:whitespace-nowrap text-lg leading-tight sm:text-2xl lg:text-2xl font-bold text-white lg:text-left text-right drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
                     E-SKM <br class="lg:hidden"> Unit Penghubung Kabupaten Paser <br class="lg:hidden"> Juanda, Samarinda
                 </div>
             </div>
@@ -317,16 +318,16 @@ $jmlResponden = DB::table('2024')
         <div class="lg:flex lg:flex-row  justify-between items-center   lg:flex-row-reverse my-2 lg:my-3">
             <div class="lg:flex gap-4 lg:justify-normal items-center  justify-between">
                 {{-- tahun --}}
-                <div class="flex gap-4 lg:justify-normal items-center justify-between">
-                    <div class="flex flex-row items-center gap-3 mb-5 lg:mb-0">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:justify-normal sm:items-center justify-between mb-4 lg:mb-0">
+                    <div class="flex flex-row items-center gap-3 flex-1 lg:flex-none">
                         <label for="countries"
-                            class=" font-bold text-white text-4xl lg:text-base drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
+                            class="w-20 sm:w-auto shrink-0 font-bold text-white text-base drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
                             Tahun</label>
 
                         <?php if($_GET['Tahun'] == ''){ ?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value "
-                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-[250px] text-center lg:w-fit lg:text-base rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-base w-full text-center lg:w-fit rounded-full px-3 py-1">
                             <option value="2023" <?php if (date('Y') == '2023') {
                                 echo 'selected';
                             } else {
@@ -350,7 +351,7 @@ $jmlResponden = DB::table('2024')
                         <?php  } else {?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + {{ $_GET['tw'] == null ? '2024' : $_GET['tw'] }} + '&Tahun=' + this.value "
-                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-[250px] text-center lg:w-fit lg:text-base rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-base w-full text-center lg:w-fit rounded-full px-3 py-1">
                             <option value="2023" <?php
                             if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                 echo 'selected';
@@ -385,14 +386,14 @@ $jmlResponden = DB::table('2024')
                     </div>
 
                     {{-- bulan --}}
-                    <div class="flex flex-row items-center gap-3 mb-5 lg:mb-0">
+                    <div class="flex flex-row items-center gap-3 flex-1 lg:flex-none">
                         <label for="countries"
-                            class=" font-bold text-white text-4xl lg:text-base drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
+                            class="w-20 sm:w-auto shrink-0 font-bold text-white text-base drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
                             Triwulan</label>
                         <?php if($_GET['tw'] == ''){ ?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }} "
-                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-full text-left lg:w-fit lg:text-base rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-base w-full text-left lg:w-fit rounded-full px-3 py-1">
 
                             <option value="1" <?php if (date('m') == 1) {
                                 echo 'selected';
@@ -432,7 +433,7 @@ $jmlResponden = DB::table('2024')
                         <?php  } else {?>
                         <select id="countries" id="language"
                             onChange="document.location.href='?tw=' + this.value + '&Tahun=' + {{ $_GET['Tahun'] == null ? '2024' : $_GET['Tahun'] }}"
-                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-4xl w-[300px] text-left lg:w-fit lg:text-base rounded-full px-3 py-1">
+                            class="bg-white border border-gray-300 text-[#008DD5] font-bold text-base w-full text-left lg:w-fit rounded-full px-3 py-1">
 
                             <option value="1" <?php
                             if ($_GET['tw'] == 1) {
@@ -491,7 +492,7 @@ $jmlResponden = DB::table('2024')
             </div>
             <div class="flex gap-5 justify-between">
                 <label
-                    class="whitespace-nowrap text-white font-bold text-5xl lg:text-xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
+                    class="whitespace-nowrap text-white font-bold text-2xl lg:text-xl drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
                     Nilai SKM :
                 </label>
             </div>
@@ -502,7 +503,7 @@ $jmlResponden = DB::table('2024')
                 <div class="items-center justify-center flex">
                     <label class="w-full text-center  lg:py-3 xl:py-6 rounded-3xl bg-white shadow-2xl ">
                         <h1
-                            class="font-extrabold text-[200px] lg:text-8xl xl:text-9xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
+                            class="font-extrabold text-7xl sm:text-8xl py-4 lg:py-0 lg:text-8xl xl:text-9xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
                             {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.2f', $nilaiSKM) }}
                         </h1>
                     </label>
@@ -514,16 +515,16 @@ $jmlResponden = DB::table('2024')
                             <thead
                                 class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-sm text-white">
                                 <tr class="">
-                                    <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-5 lg:py-1 lg:text-lg text-5xl">Kualitas
+                                    <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-2 lg:py-1 text-base sm:text-lg">Kualitas
                                         Kinerja <br class="hidden lg:block">Pelayanan
                                     </th>
                                 </tr>
                             </thead>
                         </table>
                         <h1
-                            class="font-extrabold flex text-center justify-center h-full items-center  text-9xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
+                            class="font-extrabold flex text-center justify-center h-full items-center text-base lg:text-9xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
                             <label
-                                class="ml-5 py-5 lg:py-1 font-black text-5xl lg:text-3xl text-[#008DD5] drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
+                                class="px-2 py-3 lg:py-1 font-black text-xl sm:text-2xl lg:text-3xl text-[#008DD5] drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
                                 <?php
                                 $nilai = '';
                                 if ($nilaiSKM >= 0 and $nilaiSKM <= 24.99) {
@@ -551,15 +552,15 @@ $jmlResponden = DB::table('2024')
                             <thead
                                 class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-sm text-white">
                                 <tr class="">
-                                    <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-5 lg:py-1 lg:text-lg text-5xl"> Mutu Pelayanan
+                                    <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-2 lg:py-1 text-base sm:text-lg"> Mutu Pelayanan
                                     </th>
                                 </tr>
                                 <tr>
                             </thead>
                         </table>
                         <h1
-                            class="font-extrabold flex items-center h-full text-center  text-9xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
-                            <label class="font-black text-6xl text-[#008DD5] drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
+                            class="font-extrabold flex items-center h-full text-center text-base lg:text-9xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
+                            <label class="font-black text-5xl py-3 lg:py-0 text-[#008DD5] drop-shadow-[0_3px_3px_rgba(0,0,0,0.3)]">
                                 <?php
                                 $nilai = '';
                                 if ($nilaiSKM >= 0 and $nilaiSKM <= 24.99) {
@@ -610,7 +611,7 @@ $jmlResponden = DB::table('2024')
                         </div>
                         <table class="w-full rounded-xl ">
                             <thead
-                                class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-4xl lg:text-base text-white">
+                                class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-xs sm:text-sm lg:text-base text-white">
                                 <tr class="">
                                     <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-1 ">No</th>
                                     <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-1 ">Unsur Pelayanan</th>
@@ -621,19 +622,19 @@ $jmlResponden = DB::table('2024')
                             <tbody class="border">
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         1
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Persyaratan
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr1) }}
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -653,20 +654,20 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         2
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Prosedur Pelayanan
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr2) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -686,20 +687,20 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         3
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Waktu Pelaksana
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr3) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -719,20 +720,20 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         4
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Biaya / Tarif
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr4) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -752,20 +753,20 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         5
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Produk Layanan
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr5) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -785,20 +786,20 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         6
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Kompetensi Pelaksana
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr6) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -818,20 +819,20 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         7
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Perilaku Pelaksana
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr7) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -851,19 +852,19 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         8
                                     </td>
-                                    <td class="whitespace-wrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                    <td class="whitespace-wrap  px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Sarana dan Prasarana
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr8) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -883,20 +884,20 @@ $jmlResponden = DB::table('2024')
                                 </tr>
                                 <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         9
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-normal lg:whitespace-nowrap px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         Penanganan Pengaduan
                                     </td>
                                     <td
-                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         {{ ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') ? '00' : sprintf('%0.3f', $nrr9) }}
 
                                     </td>
                                     <td
-                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-1.5 lg:text-base">
+                                        class="whitespace-nowrap  text-center px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-1.5 lg:text-base">
                                         <?php
                                         if ($_GET['Tahun'] == '2023' or $_GET['Tahun'] == '2023') {
                                             echo 'E';
@@ -921,7 +922,7 @@ $jmlResponden = DB::table('2024')
                         <div class="rounded-xl overflow-hidden h-fit lg:shrink-0 p-1 bg-white items-center">
                             <table class="w-full rounded-xl h-fit ">
                                 <thead
-                                    class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-5xl lg:text-base text-white">
+                                    class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-sm sm:text-base text-white">
                                     <tr class="">
                                         <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-1">TOTAL <br
                                                 class="hidden lg:block">RESPONDEN </th>
@@ -929,14 +930,14 @@ $jmlResponden = DB::table('2024')
                                 </thead>
                             </table>
                             <div
-                                class="font-extrabold   flex text-center justify-center py-5 lg:py-3 text-9xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
+                                class="font-extrabold   flex text-center justify-center py-4 lg:py-3 text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-tl from-[#008DD5]  via-[#008DD5] to-[#008DD5] ">
                                 {{ $jmlResponden }}
                             </div>
                         </div>
                         <div class="col-span-1 rounded-xl overflow-auto lg:flex-1 lg:min-h-0 p-1 h-fit bg-white">
                             <table class="w-full rounded-xl h-full ">
                                 <thead
-                                    class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-5xl lg:text-base text-white">
+                                    class="bg-gradient-to-br from-[#008DD5]  to-[#008DD5] font-normal border text-sm sm:text-base text-white">
                                     <tr class="">
                                         <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-1 lg:hidden">Nilai Interval </th>
                                         <th scope="col" class=" px-2 lg:px-2 2xl:px-4 py-1 lg:hidden">Nilai Konversi </th>
@@ -947,19 +948,19 @@ $jmlResponden = DB::table('2024')
                                 <tbody class="border">
                                     <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             3,532 - 4,000
                                         </td>
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             88,31 - 100,00
                                         </td>
                                         <td
-                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             A
                                         </td>
                                         <td
-                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base text-center  ">
+                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base text-center  ">
                                             Sangat Memuaskan
                                             <label class="hidden justify-center w-full lg:flex"> 88,31 - 100,00
                                             </label>
@@ -967,19 +968,19 @@ $jmlResponden = DB::table('2024')
                                     </tr>
                                     <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             3,064 - 3,532
                                         </td>
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             76,61 - 88,30
                                         </td>
                                         <td
-                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             B
                                         </td>
                                         <td
-                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base text-center  ">
+                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base text-center  ">
                                             Memuaskan
                                             <label class="hidden justify-center w-full lg:flex"> 76,61 - 88,30
                                             </label>
@@ -987,19 +988,19 @@ $jmlResponden = DB::table('2024')
                                     </tr>
                                     <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             2,600 - 3,064
                                         </td>
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             65,00 - 76,60
                                         </td>
                                         <td
-                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             C
                                         </td>
                                         <td
-                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base text-center  ">
+                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base text-center  ">
                                             Kurang Memuaskan
                                             <label class="hidden justify-center w-full lg:flex"> 65,00 - 76,60
                                             </label>
@@ -1007,19 +1008,19 @@ $jmlResponden = DB::table('2024')
                                     </tr>
                                     <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             1,000 - 2,599
                                         </td>
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             25,00 - 64,99
                                         </td>
                                         <td
-                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             D
                                         </td>
                                         <td
-                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base text-center  ">
+                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base text-center  ">
                                             Tidak Memuaskan
                                             <label class="hidden justify-center w-full lg:flex"> 25,00 - 64,99
                                             </label>
@@ -1027,19 +1028,19 @@ $jmlResponden = DB::table('2024')
                                     </tr>
                                     <tr class="border-b dark:border-neutral-500 bg-white  text-xs">
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             0,000 - 0,999
                                         </td>
                                         <td
-                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap lg:hidden text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             0,00 - 24,99
                                         </td>
                                         <td
-                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base">
+                                            class="whitespace-nowrap text-center px-2 lg:px-2 2xl:px-4 py-1 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base">
                                             E
                                         </td>
                                         <td
-                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-[40px] leading-snug py-2 lg:py-0 lg:text-base text-center  ">
+                                            class="whitespace-normal px-2 lg:px-2 2xl:px-4 font-normal text-xs sm:text-sm leading-snug py-2 lg:py-0 lg:text-base text-center  ">
                                             Sangat Tidak <br class="hidden lg:flex">Memuaskan
                                             <label class="hidden justify-center w-full lg:flex"> 0,00 - 24,99
                                             </label>
@@ -1053,14 +1054,14 @@ $jmlResponden = DB::table('2024')
                         <div class="w-full bottom-0">
                             <a href="/dashboard">
                                 <button type="button"
-                                    class="bg-white w-full b-0 p-5  shadow-2xl text-4xl font-black  rounded-2xl  text-[#008DD5] ">
+                                    class="bg-white w-full b-0 p-4 shadow-2xl text-lg font-black  rounded-2xl  text-[#008DD5] ">
                                     INFO RESPONDEN</button>
                             </a>
                         </div>
                         <div class="w-full lg:mb-0 mb-10 bottom-0">
                             <a href="/skm">
                                 <button type="button"
-                                    class="bg-white w-full b-0 p-5  shadow-2xl text-4xl font-black  rounded-2xl  text-[#008DD5] ">
+                                    class="bg-white w-full b-0 p-4 shadow-2xl text-lg font-black  rounded-2xl  text-[#008DD5] ">
                                     KLIK UNTUK
                                     MEMULAI
                                     SURVEI</button>
@@ -1089,8 +1090,8 @@ $jmlResponden = DB::table('2024')
         bln[i] = bulan[i];
     }
 
-    // label grafik dibuat besar agar mudah dibaca (layar HP dirender pada lebar ~980px)
-    Chart.defaults.font.size = window.innerWidth < 1024 ? 30 : 15;
+    // ukuran label grafik lebih kecil di layar HP
+    Chart.defaults.font.size = window.innerWidth < 1024 ? 11 : 15;
 
     const ctx = document.getElementById('myChart');
 
@@ -1108,7 +1109,7 @@ $jmlResponden = DB::table('2024')
             }]
         },
         options: {
-            aspectRatio: window.innerWidth < 1024 ? 1.8 : 4,
+            aspectRatio: window.innerWidth < 1024 ? 1.5 : 4,
             scales: {
                 y: {
                     beginAtZero: true

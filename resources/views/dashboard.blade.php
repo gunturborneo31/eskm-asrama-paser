@@ -631,7 +631,7 @@ $pekerjaan_6 = DB::table('2024')
                 </table>
             </div>
             <div class="lg:col-span-2">
-                <a href="/">
+                <a href="/nilai-skm">
                     <button type="button"
                         class="bg-white w-full b-0 p-3 mb-10 shadow-2xl text-5xl lg:text-xl font-semibold  rounded-2xl  text-[#008DD5] ">
                         KEMBALI KE DASHBOARD</button>

@@ -27,6 +27,7 @@
 </head>
 <body class="text-slate-800 relative" style="background-color: #06336b;">
     @include('partials.paser-bg')
+    @include('partials.toast-success')
     <div class="min-h-screen flex items-center justify-center p-4 sm:p-6">
         <div class="w-full max-w-md">
             <div class="bg-white rounded-[28px] shadow-[0_20px_60px_rgba(0,141,213,0.12)] p-6 sm:p-7 border border-[#CFE8F8]">
@@ -64,6 +65,10 @@
                 </div>
 
                 <div class="mt-8">
+                    <a href="{{ url('/nilai-skm') }}"
+                        class="mb-3 flex items-center justify-center w-full rounded-xl border-2 border-[#008DD5] bg-white hover:bg-sky-50 active:scale-[0.99] transition-all duration-200 text-[#008DD5] font-semibold text-base sm:text-lg py-3.5">
+                        Lihat Nilai SKM
+                    </a>
                     <a href="{{ url('/skm') }}"
                         class="group flex items-center justify-center w-full rounded-xl bg-[#008DD5] hover:bg-[#0077B8] active:scale-[0.99] transition-all duration-200 text-white font-semibold text-base sm:text-lg py-4 shadow-[0_12px_25px_rgba(0,141,213,0.3)]">
                         Isi Buku Tamu & Survey

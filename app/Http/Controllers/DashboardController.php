@@ -36,7 +36,11 @@ class DashboardController extends Controller
         } else {
             // echo "kosong";
 
-            return redirect("?tw=".$tw."&Tahun=".date('Y'));
+            // teruskan pesan sukses dari form survei melewati redirect ini
+            session()->reflash();
+
+            // tetap di URL yang sama (/nilai-skm atau /remake), hanya tambah parameter
+            return redirect(request()->url()."?tw=".$tw."&Tahun=".date('Y'));
         }
 
         // $tahun = date("Y");
